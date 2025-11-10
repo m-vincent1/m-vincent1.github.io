@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bénévolat - Mathis Vincent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Inter"', "ui-sans-serif", "system-ui"],
+            },
+            colors: {
+              primary: {
+                DEFAULT: "#2563eb",
+                light: "#60a5fa",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="lang.js" defer></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body class="font-sans text-slate-900 bg-slate-50">
+    <header class="sticky top-0 z-50 bg-white/90 border-b border-slate-200 backdrop-blur">
+      <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-6">
+        <a
+          href="index.html"
+          class="text-lg font-semibold tracking-tight"
+          data-i18n="nav_brand"
+          data-nav="index.html"
+        >
+          Mathis Vincent
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="text-slate-500 hover:text-slate-900 transition" data-i18n="nav_home" data-nav="index.html">Accueil</a>
+          <a href="experiences.html" class="text-slate-500 hover:text-slate-900 transition" data-i18n="nav_experiences" data-nav="experiences.html">Expériences</a>
+          <a href="competences.html" class="text-slate-500 hover:text-slate-900 transition" data-i18n="nav_competences" data-nav="competences.html">Compétences</a>
+          <a href="benevolat.html" class="text-slate-500 hover:text-slate-900 transition" data-i18n="nav_benevolat" data-nav="benevolat.html">Bénévolat</a>
+          <a href="contact.html" class="text-slate-500 hover:text-slate-900 transition" data-i18n="nav_contact" data-nav="contact.html">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button
+            id="lang-toggle"
+            class="flex items-center gap-2 rounded-full border border-slate-200 px-3 py-1.5 text-sm font-semibold text-slate-600 hover:text-slate-900 hover:border-primary-light transition"
+            onclick="toggleLanguage()"
+            data-i18n-aria-label="language_toggle_label"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 text-primary"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M3 12h18"></path>
+              <path d="M12 3v18"></path>
+            </svg>
+            <span class="text-xs tracking-wide" data-lang-indicator>FR</span>
+            <span class="text-[11px] uppercase text-slate-400">/ EN</span>
+          </button>
+          <a
+            href="assets/CV-Mathis-Vincent.pdf"
+            download
+            class="hidden md:inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition"
+            data-i18n="nav_cv"
+          >
+            Télécharger mon CV
+          </a>
+          <button
+            id="mobile-menu-button"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-slate-200 text-slate-600"
+            aria-label="Menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <div class="px-4 py-4 space-y-3 text-sm font-medium">
+          <a href="index.html" class="block text-slate-600" data-i18n="nav_home" data-nav="index.html">Accueil</a>
+          <a href="experiences.html" class="block text-slate-600" data-i18n="nav_experiences" data-nav="experiences.html">Expériences</a>
+          <a href="competences.html" class="block text-slate-600" data-i18n="nav_competences" data-nav="competences.html">Compétences</a>
+          <a href="benevolat.html" class="block text-slate-600" data-i18n="nav_benevolat" data-nav="benevolat.html">Bénévolat</a>
+          <a href="contact.html" class="block text-slate-600" data-i18n="nav_contact" data-nav="contact.html">Contact</a>
+          <a
+            href="assets/CV-Mathis-Vincent.pdf"
+            download
+            class="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition"
+            data-i18n="nav_cv"
+          >
+            Télécharger mon CV
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-16 space-y-10">
+      <section class="text-center space-y-4">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary" data-i18n="benev_title">
+          Actions de bénévolat
+        </p>
+        <h1 class="text-3xl font-semibold text-slate-900" data-i18n="benev_subtitle">
+          Des engagements réguliers pour rester au contact du terrain associatif.
+        </h1>
+      </section>
+
+      <section class="max-w-4xl mx-auto">
+        <article class="rounded-3xl border border-slate-200 bg-white/90 shadow-sm p-6 md:p-10">
+          <div class="grid gap-8 md:grid-cols-[1.1fr_0.9fr] items-center">
+            <div class="space-y-4">
+              <p class="text-xs font-semibold uppercase tracking-[0.3em] text-primary" data-i18n="benev_cop1_badge">
+                Cop1 Solidarités Étudiantes
+              </p>
+              <h2 class="text-2xl font-semibold text-slate-900" data-i18n="benev_cop1_title">
+                Engagement Bénévole &ndash; Cop1 Solidarités Étudiantes
+              </h2>
+              <p class="text-sm md:text-base text-slate-600 leading-relaxed" data-i18n="benev_cop1_text">
+                Depuis ma 3ème année d’école d’ingénieur, et toujours actuellement en 4ème année, je suis engagé au sein de l’association Cop1 Solidarités Étudiantes à Angers. L’association organise des actions de soutien destinées aux étudiants en situation de précarité : distributions gratuites de nourriture, produits d’hygiène, vêtements, ainsi que des moments d’échange. J’y participe de manière régulière, en soirée, en aidant à l’installation, la distribution, le réassort des stocks et le rangement. Cet engagement continu m’a permis de renforcer mon sens du collectif, de la solidarité, de l’organisation et de l’écoute, en restant connecté à la réalité du terrain associatif.
+              </p>
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+              <img
+                src="assets/benevolat.jpg"
+                alt="Équipe Cop1 Solidarités Étudiantes"
+                class="h-64 w-full object-cover"
+                data-i18n-alt="benev_cop1_alt"
+              />
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white/80">
+      <div class="max-w-5xl mx-auto px-4 py-6 text-center text-sm text-slate-500" data-i18n="footer_text">
+        &copy; 2025 Mathis Vincent - Tous droits réservés
+      </div>
+    </footer>
+  </body>
+</html>
