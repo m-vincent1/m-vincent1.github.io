@@ -10,11 +10,13 @@ const translations = {
     nav_experiences: "Expériences",
     nav_competences: "Compétences",
     nav_benevolat: "Bénévolat",
-    nav_avis: "Avis entreprise",
     nav_contact: "Contact",
     nav_cv: "Télécharger mon CV",
-    language_toggle_label: "Changer la langue FR/EN",
-    dark_mode_label: "Basculer le mode sombre",
+    language_toggle_label: "Changer la langue",
+    dark_mode_dark: "Sombre",
+    dark_mode_light: "Clair",
+    lang_fr: "Français",
+    lang_en: "English",
 
     /* ── Accueil ── */
     home_intro: "Bonjour, je suis",
@@ -44,34 +46,25 @@ const translations = {
       "Des missions variées autour du support IT, du développement et de la coordination opérationnelle.",
     exp_sigmas_title: "Startup 3Sigmas-Studios",
     exp_sigmas_period: "2025 &middot; 3 mois &middot; Budapest",
-    exp_sigmas_point1:
-      "Scripts Python pour accélérer les workflows internes.",
-    exp_sigmas_point2:
-      "Documentation technique structurée pour l'équipe.",
+    exp_sigmas_point1: "Scripts Python pour accélérer les workflows internes.",
+    exp_sigmas_point2: "Documentation technique structurée pour l'équipe.",
     exp_sigmas_point3: "Participation au recrutement des stagiaires.",
-    exp_sigmas_point4:
-      "Automatisation d'outils métier pour gagner du temps.",
+    exp_sigmas_point4: "Automatisation d'outils métier pour gagner du temps.",
     exp_ava6_title: "AVA6 Limonest",
     exp_ava6_period: "2023 &middot; 2 mois &middot; Lyon",
-    exp_ava6_point1:
-      "Support IT de proximité pour les collaborateurs.",
-    exp_ava6_point2:
-      "Gestion et suivi des incidents avec reporting clair.",
-    exp_ava6_point3:
-      "Mise en place de routines de communication inter-équipes.",
+    exp_ava6_point1: "Support IT de proximité pour les collaborateurs.",
+    exp_ava6_point2: "Gestion et suivi des incidents avec reporting clair.",
+    exp_ava6_point3: "Mise en place de routines de communication inter-équipes.",
     exp_lycee_title: "Lycée Les Lazaristes La Salle",
     exp_lycee_period: "2021 &middot; 1 mois &middot; Lyon",
-    exp_lycee_point1:
-      "Maintenance du parc informatique pédagogique.",
+    exp_lycee_point1: "Maintenance du parc informatique pédagogique.",
     exp_lycee_point2: "Assistance directe aux enseignants et élèves.",
-    exp_lycee_point3:
-      "Optimisation des procédures de préparation de salles.",
+    exp_lycee_point3: "Optimisation des procédures de préparation de salles.",
     exp_fruit_title: "Travail saisonnier &middot; Cueillette de fruits",
     exp_fruit_period: "2023 &middot; Lyon",
-    exp_fruit_point1:
-      "Organisation logistique quotidienne et respect des cadences.",
-    exp_fruit_point2:
-      "Travail d'équipe en extérieur et sens de l'effort.",
+    exp_fruit_point1: "Organisation logistique quotidienne et respect des cadences.",
+    exp_fruit_point2: "Travail d'équipe en extérieur et sens de l'effort.",
+    exp_avis_button: "Avis entreprise",
 
     /* ── Compétences ── */
     skills_title: "Compétences clés",
@@ -83,46 +76,34 @@ const translations = {
     skills_soft_title: "Soft skills",
     skills_soft_desc:
       "Savoir-être au service des utilisateurs et des équipes projet.",
-    skill_python: "Python",
+    skill_python: "Python / C++ / Java",
     skill_support: "Maintenance / Support IT",
     skill_logistics: "Gestion logistique",
     skill_networks: "Réseaux (bases)",
     skill_html: "HTML / CSS",
-    skill_cyber: "Notions cybersécurité",
+    skill_qml: "QML / Felgo",
+    skill_cyber: "Cybersécurité",
     skill_uml: "UML",
-    skill_cloud: "Cloud AWS (bases)",
-    skill_communication: "Communication claire",
-    skill_teamwork: "Travail en équipe",
-    skill_problem_solving: "Résolution de problèmes",
+    skill_cloud: "Cloud (AWS)",
+    skill_sql: "SQL",
+    skill_communication: "Communication efficace",
+    skill_teamwork: "Esprit d'équipe",
+    skill_customer_service: "Service à la clientèle",
+    skill_quick_learner: "Apprentissage rapide",
+    skill_motivated: "Motivé",
+    skill_problem_solving: "Résolution de problème",
     skill_adaptability: "Adaptabilité",
-    skill_customer_service: "Service client",
-    skill_autonomy: "Autonomie",
+    skill_flexibility: "Flexibilité",
 
     /* ── Bénévolat ── */
     benev_title: "Actions de bénévolat",
     benev_subtitle:
       "Des engagements réguliers pour rester au contact du terrain associatif.",
     benev_cop1_badge: "Cop1 Solidarités Étudiantes",
-    benev_cop1_title:
-      "Engagement Bénévole &ndash; Cop1 Solidarités Étudiantes",
+    benev_cop1_title: "Engagement Bénévole &ndash; Cop1 Solidarités Étudiantes",
     benev_cop1_text:
       "Depuis ma 3ème année d'école d'ingénieur, et toujours actuellement en 4ème année, je suis engagé au sein de l'association Cop1 Solidarités Étudiantes à Angers. L'association organise des actions de soutien destinées aux étudiants en situation de précarité : distributions gratuites de nourriture, produits d'hygiène, vêtements, ainsi que des moments d'échange. J'y participe de manière régulière, en soirée, en aidant à l'installation, la distribution, le réassort des stocks et le rangement. Cet engagement continu m'a permis de renforcer mon sens du collectif, de la solidarité, de l'organisation et de l'écoute, en restant connecté à la réalité du terrain associatif.",
     benev_cop1_alt: "Équipe Cop1 Solidarités Étudiantes en action",
-    benev_card1_title: "Maraudes &amp; distribution de repas",
-    benev_card1_context: "Soutien de terrain",
-    benev_card1_desc:
-      "Accueil des bénéficiaires, préparation des sacs et diffusion des informations utiles.",
-    benev_card2_title: "Événements associatifs",
-    benev_card2_context: "Animation &amp; coordination",
-    benev_card2_desc:
-      "Mise en place de stands, orientation des visiteurs et relais logistique.",
-    benev_card3_title: "Organisation logistique",
-    benev_card3_context: "Renfort opérationnel",
-    benev_card3_desc:
-      "Transport de matériel, installation et suivi des stocks pendant les collectes.",
-    benev_card1_alt: "Distribution de repas solidaires",
-    benev_card2_alt: "Participation à un événement associatif",
-    benev_card3_alt: "Support logistique pendant une collecte",
 
     /* ── Contact ── */
     contact_title: "Me contacter",
@@ -149,15 +130,14 @@ const translations = {
     contact_form_error: "Une erreur est survenue. Veuillez réessayer.",
     contact_form_validation: "Veuillez remplir tous les champs.",
 
-    /* ── Avis entreprise ── */
-    avis_title: "Avis entreprise",
-    avis_subtitle: "Retours et recommandations des entreprises avec lesquelles j'ai collaboré.",
-    avis_see_letter: "Voir la lettre",
-
     /* ── Modale CV ── */
     cv_modal_title: "Aperçu du CV",
     cv_modal_download: "Télécharger",
     cv_modal_close: "Fermer",
+
+    /* ── Modale Avis ── */
+    avis_modal_title: "Avis entreprise",
+    avis_modal_close: "Fermer",
 
     /* ── Chatbot ── */
     chatbot_title: "Assistant Portfolio",
@@ -176,17 +156,18 @@ const translations = {
     nav_experiences: "Experience",
     nav_competences: "Skills",
     nav_benevolat: "Volunteering",
-    nav_avis: "Company Reviews",
     nav_contact: "Contact",
     nav_cv: "Download my CV",
-    language_toggle_label: "Switch website language",
-    dark_mode_label: "Toggle dark mode",
+    language_toggle_label: "Switch language",
+    dark_mode_dark: "Dark",
+    dark_mode_light: "Light",
+    lang_fr: "Français",
+    lang_en: "English",
 
     /* ── Home ── */
     home_intro: "Hello, I am",
     home_name: "Mathis Vincent",
-    home_role:
-      "Computer &amp; Network Engineering student (ESAIP) — 4th year",
+    home_role: "Computer &amp; Network Engineering student (ESAIP) — 4th year",
     home_objective:
       "Goal: Looking for a 2-month internship in 2026 or a 6-month work-study from January to June 2027 (software dev, IT support, automation).",
     home_contact_button: "Contact me",
@@ -206,13 +187,11 @@ const translations = {
 
     /* ── Experience ── */
     exp_title: "Professional experience",
-    exp_subtitle:
-      "Assignments mixing IT support, scripting and operational coordination.",
+    exp_subtitle: "Assignments mixing IT support, scripting and operational coordination.",
     exp_sigmas_title: "3Sigmas-Studios startup",
     exp_sigmas_period: "2025 &middot; 3 months &middot; Budapest",
     exp_sigmas_point1: "Python scripts to speed up internal workflows.",
-    exp_sigmas_point2:
-      "Structured technical documentation for the team.",
+    exp_sigmas_point2: "Structured technical documentation for the team.",
     exp_sigmas_point3: "Involvement in intern recruitment sessions.",
     exp_sigmas_point4: "Automation of in-house tools to save time.",
     exp_ava6_title: "AVA6 Limonest",
@@ -227,65 +206,48 @@ const translations = {
     exp_lycee_point3: "Streamlined room preparation processes.",
     exp_fruit_title: "Seasonal job &middot; Fruit picking",
     exp_fruit_period: "2023 &middot; Lyon",
-    exp_fruit_point1:
-      "Daily logistics planning while respecting tight schedules.",
+    exp_fruit_point1: "Daily logistics planning while respecting tight schedules.",
     exp_fruit_point2: "Outdoor teamwork and strong work ethic.",
+    exp_avis_button: "Company Review",
 
     /* ── Skills ── */
     skills_title: "Key skills",
-    skills_subtitle:
-      "A versatile technical foundation supported by solid soft skills.",
+    skills_subtitle: "A versatile technical foundation supported by solid soft skills.",
     skills_technical_title: "Technical",
-    skills_technical_desc:
-      "Robust bases to work from support to automation topics.",
+    skills_technical_desc: "Robust bases to work from support to automation topics.",
     skills_soft_title: "Soft skills",
-    skills_soft_desc:
-      "People skills dedicated to users and cross-functional teams.",
-    skill_python: "Python",
-    skill_support: "Maintenance / IT support",
-    skill_logistics: "Logistics management",
+    skills_soft_desc: "People skills dedicated to users and cross-functional teams.",
+    skill_python: "Python / C++ / Java",
+    skill_support: "Maintenance / IT Support",
+    skill_logistics: "Logistics Management",
     skill_networks: "Networks (basics)",
     skill_html: "HTML / CSS",
-    skill_cyber: "Cybersecurity basics",
+    skill_qml: "QML / Felgo",
+    skill_cyber: "Cybersecurity",
     skill_uml: "UML",
-    skill_cloud: "AWS Cloud (basics)",
-    skill_communication: "Clear communication",
+    skill_cloud: "Cloud (AWS)",
+    skill_sql: "SQL",
+    skill_communication: "Effective Communication",
     skill_teamwork: "Teamwork",
-    skill_problem_solving: "Problem solving",
+    skill_customer_service: "Customer Service",
+    skill_quick_learner: "Quick Learner",
+    skill_motivated: "Motivated",
+    skill_problem_solving: "Problem Solving",
     skill_adaptability: "Adaptability",
-    skill_customer_service: "Customer service mindset",
-    skill_autonomy: "Autonomy",
+    skill_flexibility: "Flexibility",
 
     /* ── Volunteering ── */
     benev_title: "Volunteering",
-    benev_subtitle:
-      "Regular commitments to stay close to grassroots initiatives.",
+    benev_subtitle: "Regular commitments to stay close to grassroots initiatives.",
     benev_cop1_badge: "Cop1 Student Solidarity",
-    benev_cop1_title:
-      "Volunteer Commitment &ndash; Cop1 Student Solidarity",
+    benev_cop1_title: "Volunteer Commitment &ndash; Cop1 Student Solidarity",
     benev_cop1_text:
       "Since my 3rd year of engineering school, and still today in 4th year, I have been involved with Cop1 Solidarités Étudiantes in Angers. The non-profit supports students facing hardship through free distributions of food, hygiene products, clothing and safe moments to talk. I volunteer in the evenings on a regular basis, helping with set-up, distribution, stock refills and clean-up. This ongoing work strengthens my sense of teamwork, solidarity, organization and active listening while staying connected to the realities of field initiatives.",
     benev_cop1_alt: "Cop1 volunteers supporting students",
-    benev_card1_title: "Outreach &amp; meal distribution",
-    benev_card1_context: "On-the-ground support",
-    benev_card1_desc:
-      "Welcoming people, preparing bags and sharing useful information.",
-    benev_card2_title: "Community events",
-    benev_card2_context: "Animation &amp; coordination",
-    benev_card2_desc:
-      "Setting up booths, guiding visitors and handling logistics.",
-    benev_card3_title: "Logistics organization",
-    benev_card3_context: "Operational backup",
-    benev_card3_desc:
-      "Transporting gear, installing areas and monitoring stock during drives.",
-    benev_card1_alt: "Volunteers distributing meals",
-    benev_card2_alt: "Volunteer helping during a community event",
-    benev_card3_alt: "Logistics support during a donation drive",
 
     /* ── Contact ── */
     contact_title: "Get in touch",
-    contact_subtitle:
-      "Available for a 2-month internship in 2026 or a 6-month work-study (January-June 2027). Let's discuss your needs.",
+    contact_subtitle: "Available for a 2-month internship in 2026 or a 6-month work-study (January-June 2027). Let's discuss your needs.",
     contact_info_note: "I reply quickly by email or phone.",
     contact_info_email_title: "Email",
     contact_info_phone_title: "Phone",
@@ -307,15 +269,14 @@ const translations = {
     contact_form_error: "An error occurred. Please try again.",
     contact_form_validation: "Please fill in all fields.",
 
-    /* ── Company Reviews ── */
-    avis_title: "Company Reviews",
-    avis_subtitle: "Feedback and recommendations from companies I have worked with.",
-    avis_see_letter: "See the letter",
-
     /* ── CV Modal ── */
     cv_modal_title: "CV Preview",
     cv_modal_download: "Download",
     cv_modal_close: "Close",
+
+    /* ── Avis Modal ── */
+    avis_modal_title: "Company Review",
+    avis_modal_close: "Close",
 
     /* ── Chatbot ── */
     chatbot_title: "Portfolio Assistant",
@@ -361,10 +322,14 @@ function applyLanguage(lang) {
     el.setAttribute("aria-label", value);
   });
 
-  const indicator = document.querySelector("[data-lang-indicator]");
-  if (indicator) {
-    indicator.textContent = selectedLang.toUpperCase();
+  // Update language button text
+  const langBtn = document.getElementById("lang-toggle-text");
+  if (langBtn) {
+    langBtn.textContent = selectedLang.toUpperCase();
   }
+
+  // Update dark mode button text
+  updateDarkModeButtonText();
 }
 
 function setLanguage(lang) {
@@ -372,6 +337,9 @@ function setLanguage(lang) {
   localStorage.setItem("siteLanguage", normalized);
   document.documentElement.setAttribute("lang", normalized);
   applyLanguage(normalized);
+  // Close dropdown if open
+  const dd = document.getElementById("lang-dropdown");
+  if (dd) dd.classList.add("hidden");
 }
 
 function toggleLanguage() {
@@ -379,6 +347,20 @@ function toggleLanguage() {
   const next = current === "fr" ? "en" : "fr";
   setLanguage(next);
 }
+
+function toggleLangDropdown() {
+  const dd = document.getElementById("lang-dropdown");
+  if (dd) dd.classList.toggle("hidden");
+}
+
+// Close lang dropdown on outside click
+document.addEventListener("click", (e) => {
+  const wrapper = document.getElementById("lang-dropdown-wrapper");
+  const dd = document.getElementById("lang-dropdown");
+  if (wrapper && dd && !wrapper.contains(e.target)) {
+    dd.classList.add("hidden");
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem("siteLanguage") || "fr";

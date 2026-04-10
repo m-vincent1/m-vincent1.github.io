@@ -7,27 +7,12 @@
     <title>Bénévolat - Mathis Vincent</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"Inter"', "ui-sans-serif", "system-ui"],
-            },
-            colors: {
-              primary: {
-                DEFAULT: "#2563eb",
-                light: "#60a5fa",
-              },
-            },
-          },
-        },
+        theme: { extend: { fontFamily: { sans: ['"Inter"', "ui-sans-serif", "system-ui"] }, colors: { primary: { DEFAULT: "#2563eb", light: "#60a5fa" } } } },
       };
     </script>
     <script src="lang.js" defer></script>
@@ -35,34 +20,30 @@
   </head>
   <body class="font-sans text-slate-900 bg-slate-50 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
     <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-700 backdrop-blur">
-      <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-6">
+      <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
         <a href="index.html" class="text-lg font-semibold tracking-tight dark:text-white" data-i18n="nav_brand" data-nav="index.html">Mathis Vincent</a>
-        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <div class="hidden md:flex items-center gap-5 text-sm font-medium">
           <a href="index.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_home" data-nav="index.html">Accueil</a>
           <a href="experiences.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_experiences" data-nav="experiences.html">Expériences</a>
           <a href="competences.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_competences" data-nav="competences.html">Compétences</a>
           <a href="benevolat.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_benevolat" data-nav="benevolat.html">Bénévolat</a>
-          <a href="avis-entreprise.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_avis" data-nav="avis-entreprise.html">Avis entreprise</a>
           <a href="contact.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_contact" data-nav="contact.html">Contact</a>
         </div>
-        <div class="flex items-center gap-3">
-          <button id="dark-mode-toggle" class="flex items-center justify-center w-9 h-9 rounded-full border border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition" onclick="toggleDarkMode()" data-i18n-aria-label="dark_mode_label" aria-label="Basculer le mode sombre">
-            <span id="dark-mode-icon">🌙</span>
-          </button>
-          <button id="lang-toggle" class="flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-600 px-3 py-1.5 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-primary-light transition" onclick="toggleLanguage()" data-i18n-aria-label="language_toggle_label">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <circle cx="12" cy="12" r="9"></circle>
-              <path d="M3 12h18"></path>
-              <path d="M12 3v18"></path>
-            </svg>
-            <span class="text-xs tracking-wide" data-lang-indicator>FR</span>
-            <span class="text-[11px] uppercase text-slate-400 dark:text-slate-500">/ EN</span>
-          </button>
+        <div class="flex items-center gap-2">
           <button data-cv-preview class="hidden md:inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition cursor-pointer" data-i18n="nav_cv">Télécharger mon CV</button>
+          <button id="dark-mode-toggle" onclick="toggleDarkMode()" class="rounded-full px-3 py-1.5 text-xs font-semibold transition bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-80">Sombre</button>
+          <div class="relative" id="lang-dropdown-wrapper">
+            <button id="lang-toggle" onclick="toggleLangDropdown()" class="flex items-center gap-1 rounded-full border border-slate-200 dark:border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-primary-light transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3v18"></path></svg>
+              <span id="lang-toggle-text">FR</span>
+            </button>
+            <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-lg overflow-hidden z-50">
+              <button onclick="setLanguage('fr')" class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition" data-i18n="lang_fr">Français</button>
+              <button onclick="setLanguage('en')" class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition" data-i18n="lang_en">English</button>
+            </div>
+          </div>
           <button id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300" aria-label="Menu">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
           </button>
         </div>
       </nav>
@@ -72,7 +53,6 @@
           <a href="experiences.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_experiences" data-nav="experiences.html">Expériences</a>
           <a href="competences.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_competences" data-nav="competences.html">Compétences</a>
           <a href="benevolat.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_benevolat" data-nav="benevolat.html">Bénévolat</a>
-          <a href="avis-entreprise.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_avis" data-nav="avis-entreprise.html">Avis entreprise</a>
           <a href="contact.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_contact" data-nav="contact.html">Contact</a>
           <button data-cv-preview class="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition cursor-pointer" data-i18n="nav_cv">Télécharger mon CV</button>
         </div>
@@ -81,35 +61,19 @@
 
     <main class="max-w-5xl mx-auto px-4 py-16 space-y-10 flex-1">
       <section class="text-center space-y-4">
-        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary" data-i18n="benev_title">
-          Actions de bénévolat
-        </p>
-        <h1 class="text-3xl font-semibold text-slate-900 dark:text-white" data-i18n="benev_subtitle">
-          Des engagements réguliers pour rester au contact du terrain associatif.
-        </h1>
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary" data-i18n="benev_title">Actions de bénévolat</p>
+        <h1 class="text-3xl font-semibold text-slate-900 dark:text-white" data-i18n="benev_subtitle">Des engagements réguliers pour rester au contact du terrain associatif.</h1>
       </section>
-
       <section class="max-w-4xl mx-auto">
         <article class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 shadow-sm p-6 md:p-10">
           <div class="grid gap-8 md:grid-cols-[1.1fr_0.9fr] items-center">
             <div class="space-y-4">
-              <p class="text-xs font-semibold uppercase tracking-[0.3em] text-primary" data-i18n="benev_cop1_badge">
-                Cop1 Solidarités Étudiantes
-              </p>
-              <h2 class="text-2xl font-semibold text-slate-900 dark:text-white" data-i18n="benev_cop1_title">
-                Engagement Bénévole &ndash; Cop1 Solidarités Étudiantes
-              </h2>
-              <p class="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="benev_cop1_text">
-                Depuis ma 3ème année d'école d'ingénieur, et toujours actuellement en 4ème année, je suis engagé au sein de l'association Cop1 Solidarités Étudiantes à Angers. L'association organise des actions de soutien destinées aux étudiants en situation de précarité : distributions gratuites de nourriture, produits d'hygiène, vêtements, ainsi que des moments d'échange. J'y participe de manière régulière, en soirée, en aidant à l'installation, la distribution, le réassort des stocks et le rangement. Cet engagement continu m'a permis de renforcer mon sens du collectif, de la solidarité, de l'organisation et de l'écoute, en restant connecté à la réalité du terrain associatif.
-              </p>
+              <p class="text-xs font-semibold uppercase tracking-[0.3em] text-primary" data-i18n="benev_cop1_badge">Cop1 Solidarités Étudiantes</p>
+              <h2 class="text-2xl font-semibold text-slate-900 dark:text-white" data-i18n="benev_cop1_title">Engagement Bénévole &ndash; Cop1 Solidarités Étudiantes</h2>
+              <p class="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="benev_cop1_text">Depuis ma 3ème année d'école d'ingénieur, et toujours actuellement en 4ème année, je suis engagé au sein de l'association Cop1 Solidarités Étudiantes à Angers.</p>
             </div>
             <div class="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-700">
-              <img
-                src="assets/benevolat.jpg"
-                alt="Équipe Cop1 Solidarités Étudiantes"
-                class="h-64 w-full object-cover"
-                data-i18n-alt="benev_cop1_alt"
-              />
+              <img src="assets/benevolat.jpg" alt="Équipe Cop1 Solidarités Étudiantes" class="h-64 w-full object-cover" data-i18n-alt="benev_cop1_alt" />
             </div>
           </div>
         </article>
@@ -117,9 +81,7 @@
     </main>
 
     <footer class="border-t border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80">
-      <div class="max-w-5xl mx-auto px-4 py-6 text-center text-sm text-slate-500 dark:text-slate-400" data-i18n="footer_text">
-        &copy; 2026 Mathis Vincent - Tous droits réservés
-      </div>
+      <div class="max-w-5xl mx-auto px-4 py-6 text-center text-sm text-slate-500 dark:text-slate-400" data-i18n="footer_text">&copy; 2026 Mathis Vincent - Tous droits réservés</div>
     </footer>
   </body>
 </html>
