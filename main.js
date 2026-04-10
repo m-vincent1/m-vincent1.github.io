@@ -179,23 +179,29 @@ function initAvisButtons() {
    ============================================================ */
 function createSideAnimations() {
   const leftContainer = document.createElement("div");
-  leftContainer.className = "side-anim side-anim-left fixed left-0 top-0 w-12 h-full pointer-events-none z-10 hidden lg:flex flex-col items-center justify-center gap-1 overflow-hidden";
+  leftContainer.className = "fixed left-0 xl:left-4 top-0 w-24 h-full pointer-events-none z-0 hidden lg:flex gap-4 justify-center overflow-hidden";
+  
   const rightContainer = document.createElement("div");
-  rightContainer.className = "side-anim side-anim-right fixed right-0 top-0 w-12 h-full pointer-events-none z-10 hidden lg:flex flex-col items-center justify-center gap-1 overflow-hidden";
+  rightContainer.className = "fixed right-0 xl:right-4 top-0 w-24 h-full pointer-events-none z-0 hidden lg:flex gap-4 justify-center overflow-hidden";
 
-  for (let i = 0; i < 20; i++) {
-    const leftBar = document.createElement("div");
-    leftBar.className = "side-bar";
-    leftBar.style.animationDelay = `${i * 0.15}s`;
-    leftBar.style.animationDuration = `${2 + Math.random() * 2}s`;
-    leftContainer.appendChild(leftBar);
-
-    const rightBar = document.createElement("div");
-    rightBar.className = "side-bar";
-    rightBar.style.animationDelay = `${i * 0.15 + 0.07}s`;
-    rightBar.style.animationDuration = `${2 + Math.random() * 2}s`;
-    rightContainer.appendChild(rightBar);
+  function createTrack(isUp) {
+    const track = document.createElement("div");
+    track.className = "relative w-12 h-full";
+    for (let i = 0; i < 5; i++) {
+        const block = document.createElement("div");
+        block.className = `w-12 h-40 rounded-xl absolute ${isUp ? 'anim-block-up' : 'anim-block-down'}`;
+        block.style.animationDelay = `${i * (20 / 5)}s`;
+        track.appendChild(block);
+    }
+    return track;
   }
+
+  leftContainer.appendChild(createTrack(true));
+  leftContainer.appendChild(createTrack(false));
+  
+  rightContainer.appendChild(createTrack(true));
+  rightContainer.appendChild(createTrack(false));
+
   document.body.appendChild(leftContainer);
   document.body.appendChild(rightContainer);
 }
@@ -370,11 +376,12 @@ function initContactForm() {
 function injectGlobalStyles() {
   const style = document.createElement("style");
   style.textContent = `
-    @keyframes sideBarUp { 0%{transform:translateY(100%);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateY(-100%);opacity:0} }
-    @keyframes sideBarDown { 0%{transform:translateY(-100%);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateY(100%);opacity:0} }
-    .side-bar { width:3px; height:18px; border-radius:2px; background:rgba(255,255,255,0.18); animation:sideBarUp 3s ease-in-out infinite alternate; }
-    .side-bar:nth-child(even) { animation-name:sideBarDown; }
-    .dark .side-bar { background:rgba(37,99,235,0.2); }
+    .anim-block-up, .anim-block-down { border: 2px solid rgba(0,0,0,0.03); background-color: rgba(0,0,0,0.015); box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    .dark .anim-block-up, .dark .anim-block-down { border-color: rgba(255,255,255,0.03); background-color: rgba(255,255,255,0.015); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .anim-block-up { animation: floatUp 24s linear infinite; top: 0; left: 0; }
+    .anim-block-down { animation: floatDown 24s linear infinite; top: 0; left: 0; }
+    @keyframes floatUp { 0%{transform:translateY(110vh);opacity:0} 5%{opacity:1} 95%{opacity:1} 100%{transform:translateY(-200px);opacity:0} }
+    @keyframes floatDown { 0%{transform:translateY(-200px);opacity:0} 5%{opacity:1} 95%{opacity:1} 100%{transform:translateY(110vh);opacity:0} }
     *,*::before,*::after { transition:background-color 0.25s ease,border-color 0.25s ease,color 0.15s ease; }
     #chatbot-window { animation:chatSlideUp 0.25s ease-out; }
     @keyframes chatSlideUp { from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)} }
