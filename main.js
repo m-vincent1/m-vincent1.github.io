@@ -351,7 +351,7 @@ function initContactForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY_HERE", // <-- REPLACE WITH YOUR WEB3FORMS KEY
+          access_key: "4768cffe-f994-418c-ab9b-ff26462402b6",
           name,
           email,
           message,
