@@ -388,6 +388,8 @@ function injectGlobalStyles() {
     article.rounded-2xl, article.rounded-3xl { transition:transform 0.2s ease, box-shadow 0.2s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.15s ease; }
     article.rounded-2xl:hover, article.rounded-3xl:hover { transform:scale(1.02); box-shadow:0 8px 30px rgba(0,0,0,0.08); }
     .dark article.rounded-2xl:hover, .dark article.rounded-3xl:hover { box-shadow:0 8px 30px rgba(0,0,0,0.25); }
+    li.rounded-full { transition:transform 0.2s ease, background-color 0.2s ease, color 0.2s ease; cursor: default; }
+    li.rounded-full:hover { transform:scale(1.05); background-color:#2563eb !important; color:#ffffff !important; }
   `;
   document.head.appendChild(style);
 }
