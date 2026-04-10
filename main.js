@@ -385,6 +385,9 @@ function injectGlobalStyles() {
     .appear-anim { opacity:0; transform:translateY(20px); transition:opacity 0.5s ease,transform 0.5s ease; }
     .appear-anim.visible { opacity:1; transform:translateY(0); }
     #lang-dropdown { animation:chatSlideUp 0.15s ease-out; }
+    article.rounded-2xl, article.rounded-3xl { transition:transform 0.2s ease, box-shadow 0.2s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.15s ease; }
+    article.rounded-2xl:hover, article.rounded-3xl:hover { transform:scale(1.02); box-shadow:0 8px 30px rgba(0,0,0,0.08); }
+    .dark article.rounded-2xl:hover, .dark article.rounded-3xl:hover { box-shadow:0 8px 30px rgba(0,0,0,0.25); }
   `;
   document.head.appendChild(style);
 }
