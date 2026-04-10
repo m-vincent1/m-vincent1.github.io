@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contactez Mathis Vincent — Formulaire de contact, email, téléphone, LinkedIn." />
-    <title>Contact - Mathis Vincent</title>
+    <meta name="description" content="Avis et retours des entreprises ayant collaboré avec Mathis Vincent." />
+    <title>Avis entreprise - Mathis Vincent</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -79,107 +79,22 @@
       </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4 py-16 space-y-12 flex-1">
-      <section class="text-center space-y-4">
-        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary" data-i18n="contact_title">
-          Me contacter
+    <main class="max-w-5xl mx-auto px-4 py-16 space-y-12 flex-1">
+      <section class="space-y-4 text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary" data-i18n="avis_title">
+          Avis entreprise
         </p>
-        <h1 class="text-3xl font-semibold text-slate-900 dark:text-white" data-i18n="contact_subtitle">
-          Disponible pour un stage de 2 mois pour 2026 ou une alternance de 6 mois (janvier-juin 2027). Discutons de vos besoins.
+        <h1 class="text-3xl font-semibold text-slate-900 dark:text-white" data-i18n="avis_subtitle">
+          Retours et recommandations des entreprises avec lesquelles j'ai collaboré.
         </h1>
-        <p class="text-sm text-slate-500 dark:text-slate-400" data-i18n="contact_info_note">
-          Je réponds rapidement par mail ou téléphone.
-        </p>
+        <!-- Blue decorative line like the reference image -->
+        <div class="flex justify-center mt-2">
+          <div class="w-16 h-1 rounded-full bg-primary"></div>
+        </div>
       </section>
 
-      <section class="grid gap-8 md:grid-cols-2 items-stretch">
-        <!-- Contact info card — uses flex-col justify-between to fill full height -->
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-6 shadow-sm flex flex-col justify-between">
-          <div class="space-y-5 flex-1">
-            <div class="space-y-1">
-              <p class="text-xs uppercase tracking-[0.3em] text-primary" data-i18n="contact_info_email_title">Email</p>
-              <p class="text-base font-semibold dark:text-white">
-                <a href="mailto:mathisvincent446@gmail.com" class="hover:text-primary transition" data-i18n="contact_email_label">mathisvincent446@gmail.com</a>
-              </p>
-            </div>
-            <div class="space-y-1">
-              <p class="text-xs uppercase tracking-[0.3em] text-primary" data-i18n="contact_info_phone_title">Téléphone</p>
-              <p class="text-base font-semibold dark:text-white">
-                <a href="tel:+33677074251" class="hover:text-primary transition" data-i18n="contact_phone_label">+33 6 77 07 42 51</a>
-              </p>
-            </div>
-            <div class="space-y-1">
-              <p class="text-xs uppercase tracking-[0.3em] text-primary" data-i18n="contact_info_address_title">Adresse</p>
-              <p class="text-base font-semibold dark:text-white" data-i18n="contact_address_label">
-                43 bis Rue du 8 mai 1945, 49124
-              </p>
-            </div>
-            <div class="space-y-1">
-              <p class="text-xs uppercase tracking-[0.3em] text-primary" data-i18n="contact_info_linkedin_title">LinkedIn</p>
-              <p class="text-base font-semibold">
-                <a
-                  href="https://linkedin.com/in/mathis-vincent-224b24257"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-slate-900 dark:text-white hover:text-primary transition"
-                  data-i18n="contact_linkedin_label"
-                >
-                  linkedin.com/in/mathis-vincent-224b24257
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contact form -->
-        <form id="contact-form" class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-6 shadow-sm space-y-4 flex flex-col">
-          <h2 class="text-xl font-semibold text-slate-900 dark:text-white" data-i18n="contact_form_title">
-            Formulaire de contact
-          </h2>
-          <label class="block text-sm font-medium text-slate-600 dark:text-slate-300 space-y-2">
-            <span data-i18n="contact_form_name">Nom complet</span>
-            <input
-              id="contact-name"
-              type="text"
-              required
-              class="w-full rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
-              data-i18n-placeholder="contact_placeholder_name"
-              placeholder="Votre nom"
-            />
-          </label>
-          <label class="block text-sm font-medium text-slate-600 dark:text-slate-300 space-y-2">
-            <span data-i18n="contact_form_email">Email</span>
-            <input
-              id="contact-email"
-              type="email"
-              required
-              class="w-full rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
-              data-i18n-placeholder="contact_placeholder_email"
-              placeholder="Votre email"
-            />
-          </label>
-          <label class="block text-sm font-medium text-slate-600 dark:text-slate-300 space-y-2 flex-1">
-            <span data-i18n="contact_form_message">Message</span>
-            <textarea
-              id="contact-message"
-              rows="5"
-              required
-              class="w-full rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none resize-none"
-              data-i18n-placeholder="contact_placeholder_message"
-              placeholder="Votre message"
-            ></textarea>
-          </label>
-          <!-- Honeypot anti-spam -->
-          <input type="text" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
-          <div id="contact-status" class="text-sm" aria-live="polite"></div>
-          <button
-            type="submit"
-            class="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition disabled:opacity-50"
-            data-i18n="contact_form_button"
-          >
-            Envoyer
-          </button>
-        </form>
+      <section id="avis-list" class="space-y-6">
+        <!-- Reviews are injected dynamically from avisData below -->
       </section>
     </main>
 
@@ -188,5 +103,67 @@
         &copy; 2026 Mathis Vincent - Tous droits réservés
       </div>
     </footer>
+
+    <script>
+      /* ── AVIS DATA — Easy to edit ── */
+      const avisData = [
+        {
+          date: "2025",
+          entreprise: "3Sigmas-Studios",
+          responsable: "Responsable de stage",
+          lieu: "Budapest",
+          etoiles: 5,
+          commentaire: "PLACEHOLDER — Remplacez ce texte par le vrai commentaire de l'entreprise 3Sigmas-Studios."
+        },
+        {
+          date: "2023",
+          entreprise: "AVA6",
+          responsable: "Responsable de stage",
+          lieu: "Limonest, Lyon",
+          etoiles: 5,
+          commentaire: "PLACEHOLDER — Remplacez ce texte par le vrai commentaire de l'entreprise AVA6."
+        },
+        {
+          date: "2021",
+          entreprise: "Lycée Les Lazaristes La Salle",
+          responsable: "Responsable de stage",
+          lieu: "Lyon",
+          etoiles: 5,
+          commentaire: "PLACEHOLDER — Remplacez ce texte par le vrai commentaire du Lycée Les Lazaristes."
+        }
+      ];
+
+      function renderAvis() {
+        const container = document.getElementById("avis-list");
+        if (!container) return;
+        container.innerHTML = "";
+
+        avisData.forEach((avis) => {
+          const stars = "★".repeat(avis.etoiles) + "☆".repeat(5 - avis.etoiles);
+
+          const article = document.createElement("article");
+          article.className =
+            "rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-6 shadow-sm";
+
+          article.innerHTML = `
+            <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between mb-4">
+              <div>
+                <h2 class="text-xl font-semibold text-slate-900 dark:text-white">${avis.entreprise}</h2>
+                <span class="text-sm text-slate-500 dark:text-slate-400">${avis.responsable} — ${avis.lieu}</span>
+              </div>
+              <span class="text-sm font-medium text-primary">${avis.date}</span>
+            </div>
+            <div class="text-yellow-400 text-lg mb-3 tracking-wider">${stars}</div>
+            <blockquote class="text-slate-600 dark:text-slate-300 italic leading-relaxed border-l-4 border-primary/30 pl-4">
+              « ${avis.commentaire} »
+            </blockquote>
+          `;
+
+          container.appendChild(article);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", renderAvis);
+    </script>
   </body>
 </html>

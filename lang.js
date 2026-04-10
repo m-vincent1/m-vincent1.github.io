@@ -1,21 +1,30 @@
+/* ============================================================
+   lang.js — Internationalisation FR / EN
+   ============================================================ */
+
 const translations = {
   fr: {
+    /* ── Navigation ── */
     nav_brand: "Mathis Vincent",
     nav_home: "Accueil",
     nav_experiences: "Expériences",
     nav_competences: "Compétences",
     nav_benevolat: "Bénévolat",
+    nav_avis: "Avis entreprise",
     nav_contact: "Contact",
     nav_cv: "Télécharger mon CV",
     language_toggle_label: "Changer la langue FR/EN",
+    dark_mode_label: "Basculer le mode sombre",
+
+    /* ── Accueil ── */
     home_intro: "Bonjour, je suis",
     home_name: "Mathis Vincent",
     home_role:
-      "Étudiant ingénieur en Informatique & Réseaux (ESAIP) — 4ème année",
+      "Étudiant ingénieur en Informatique &amp; Réseaux (ESAIP) — 4ème année",
     home_objective:
-      "Objectif : Recherche un stage de 2 mois été 2025 (dev logiciel, support IT, automatisation).",
+      "Objectif : Recherche un stage de 2 mois pour 2026 ou une alternance de 6 mois de janvier 2027 à juin 2027 (dev logiciel, support IT, automatisation).",
     home_contact_button: "Me contacter",
-    home_section_title: "Profil & objectif",
+    home_section_title: "Profil &amp; objectif",
     home_section_subtitle:
       "Curieux, méthodique et tourné vers l'humain, je construis des solutions sobres qui facilitent la vie des équipes.",
     home_about_title: "Vision orientée résultats",
@@ -24,33 +33,47 @@ const translations = {
     home_strengths_title: "Forces quotidiennes",
     home_strengths_text:
       "Autonomie, réactivité et sens du service pour accompagner les utilisateurs comme les équipes projet.",
-    home_focus_title: "Cap sur 2025",
+    home_focus_title: "Cap sur 2026-2027",
     home_focus_text:
-      "Approfondir l'automatisation logicielle et l'industrialisation des processus IT durant mon prochain stage.",
+      "Approfondir l'automatisation logicielle et l'industrialisation des processus IT durant mon prochain stage ou alternance.",
+    home_photo_alt: "Portrait professionnel de Mathis Vincent",
+
+    /* ── Expériences ── */
     exp_title: "Expériences professionnelles",
     exp_subtitle:
       "Des missions variées autour du support IT, du développement et de la coordination opérationnelle.",
     exp_sigmas_title: "Startup 3Sigmas-Studios",
     exp_sigmas_period: "2025 &middot; 3 mois &middot; Budapest",
-    exp_sigmas_point1: "Scripts Python pour accélérer les workflows internes.",
-    exp_sigmas_point2: "Documentation technique structurée pour l'équipe.",
+    exp_sigmas_point1:
+      "Scripts Python pour accélérer les workflows internes.",
+    exp_sigmas_point2:
+      "Documentation technique structurée pour l'équipe.",
     exp_sigmas_point3: "Participation au recrutement des stagiaires.",
-    exp_sigmas_point4: "Automatisation d'outils métier pour gagner du temps.",
+    exp_sigmas_point4:
+      "Automatisation d'outils métier pour gagner du temps.",
     exp_ava6_title: "AVA6 Limonest",
     exp_ava6_period: "2023 &middot; 2 mois &middot; Lyon",
-    exp_ava6_point1: "Support IT de proximité pour les collaborateurs.",
-    exp_ava6_point2: "Gestion et suivi des incidents avec reporting clair.",
-    exp_ava6_point3: "Mise en place de routines de communication inter-équipes.",
+    exp_ava6_point1:
+      "Support IT de proximité pour les collaborateurs.",
+    exp_ava6_point2:
+      "Gestion et suivi des incidents avec reporting clair.",
+    exp_ava6_point3:
+      "Mise en place de routines de communication inter-équipes.",
     exp_lycee_title: "Lycée Les Lazaristes La Salle",
     exp_lycee_period: "2021 &middot; 1 mois &middot; Lyon",
-    exp_lycee_point1: "Maintenance du parc informatique pédagogique.",
+    exp_lycee_point1:
+      "Maintenance du parc informatique pédagogique.",
     exp_lycee_point2: "Assistance directe aux enseignants et élèves.",
-    exp_lycee_point3: "Optimisation des procédures de préparation de salles.",
+    exp_lycee_point3:
+      "Optimisation des procédures de préparation de salles.",
     exp_fruit_title: "Travail saisonnier &middot; Cueillette de fruits",
     exp_fruit_period: "2023 &middot; Lyon",
     exp_fruit_point1:
       "Organisation logistique quotidienne et respect des cadences.",
-    exp_fruit_point2: "Travail d'équipe en extérieur et sens de l'effort.",
+    exp_fruit_point2:
+      "Travail d'équipe en extérieur et sens de l'effort.",
+
+    /* ── Compétences ── */
     skills_title: "Compétences clés",
     skills_subtitle:
       "Un socle technique polyvalent complété par des soft skills orientés service.",
@@ -74,20 +97,23 @@ const translations = {
     skill_adaptability: "Adaptabilité",
     skill_customer_service: "Service client",
     skill_autonomy: "Autonomie",
+
+    /* ── Bénévolat ── */
     benev_title: "Actions de bénévolat",
     benev_subtitle:
       "Des engagements réguliers pour rester au contact du terrain associatif.",
     benev_cop1_badge: "Cop1 Solidarités Étudiantes",
-    benev_cop1_title: "Engagement Bénévole &ndash; Cop1 Solidarités Étudiantes",
+    benev_cop1_title:
+      "Engagement Bénévole &ndash; Cop1 Solidarités Étudiantes",
     benev_cop1_text:
-      "Depuis ma 3ème année d’école d’ingénieur, et toujours actuellement en 4ème année, je suis engagé au sein de l’association Cop1 Solidarités Étudiantes à Angers. L’association organise des actions de soutien destinées aux étudiants en situation de précarité : distributions gratuites de nourriture, produits d’hygiène, vêtements, ainsi que des moments d’échange. J’y participe de manière régulière, en soirée, en aidant à l’installation, la distribution, le réassort des stocks et le rangement. Cet engagement continu m’a permis de renforcer mon sens du collectif, de la solidarité, de l’organisation et de l’écoute, en restant connecté à la réalité du terrain associatif.",
+      "Depuis ma 3ème année d'école d'ingénieur, et toujours actuellement en 4ème année, je suis engagé au sein de l'association Cop1 Solidarités Étudiantes à Angers. L'association organise des actions de soutien destinées aux étudiants en situation de précarité : distributions gratuites de nourriture, produits d'hygiène, vêtements, ainsi que des moments d'échange. J'y participe de manière régulière, en soirée, en aidant à l'installation, la distribution, le réassort des stocks et le rangement. Cet engagement continu m'a permis de renforcer mon sens du collectif, de la solidarité, de l'organisation et de l'écoute, en restant connecté à la réalité du terrain associatif.",
     benev_cop1_alt: "Équipe Cop1 Solidarités Étudiantes en action",
-    benev_card1_title: "Maraudes & distribution de repas",
+    benev_card1_title: "Maraudes &amp; distribution de repas",
     benev_card1_context: "Soutien de terrain",
     benev_card1_desc:
       "Accueil des bénéficiaires, préparation des sacs et diffusion des informations utiles.",
     benev_card2_title: "Événements associatifs",
-    benev_card2_context: "Animation & coordination",
+    benev_card2_context: "Animation &amp; coordination",
     benev_card2_desc:
       "Mise en place de stands, orientation des visiteurs et relais logistique.",
     benev_card3_title: "Organisation logistique",
@@ -97,46 +123,74 @@ const translations = {
     benev_card1_alt: "Distribution de repas solidaires",
     benev_card2_alt: "Participation à un événement associatif",
     benev_card3_alt: "Support logistique pendant une collecte",
+
+    /* ── Contact ── */
     contact_title: "Me contacter",
     contact_subtitle:
-      "Disponible pour un stage de 2 mois à partir de juin 2025. Discutons de vos besoins.",
+      "Disponible pour un stage de 2 mois pour 2026 ou une alternance de 6 mois (janvier-juin 2027). Discutons de vos besoins.",
     contact_info_note: "Je réponds rapidement par mail ou téléphone.",
     contact_info_email_title: "Email",
     contact_info_phone_title: "Téléphone",
     contact_info_address_title: "Adresse",
     contact_info_linkedin_title: "LinkedIn",
-    contact_email_label: "Email : mathisvincent446@gmail.com",
-    contact_phone_label: "Téléphone : +33 6 77 07 42 51",
-    contact_address_label: "Adresse : 43 bis Rue du 8 mai 1945, 49124",
-    contact_linkedin_label: "LinkedIn : linkedin.com/in/mathis-vincent-224b24257",
+    contact_email_label: "mathisvincent446@gmail.com",
+    contact_phone_label: "+33 6 77 07 42 51",
+    contact_address_label: "43 bis Rue du 8 mai 1945, 49124",
+    contact_linkedin_label: "linkedin.com/in/mathis-vincent-224b24257",
     contact_form_title: "Formulaire de contact",
     contact_form_name: "Nom complet",
     contact_form_email: "Email",
     contact_form_message: "Message",
-    contact_form_button: "Envoyer (simulation)",
+    contact_form_button: "Envoyer",
     contact_placeholder_name: "Votre nom",
     contact_placeholder_email: "Votre email",
     contact_placeholder_message: "Votre message",
-    home_photo_alt: "Portrait professionnel de Mathis Vincent",
-    footer_text: "&copy; 2025 Mathis Vincent - Tous droits réservés",
+    contact_form_success: "Message envoyé avec succès ! Je vous répondrai rapidement.",
+    contact_form_error: "Une erreur est survenue. Veuillez réessayer.",
+    contact_form_validation: "Veuillez remplir tous les champs.",
+
+    /* ── Avis entreprise ── */
+    avis_title: "Avis entreprise",
+    avis_subtitle: "Retours et recommandations des entreprises avec lesquelles j'ai collaboré.",
+    avis_see_letter: "Voir la lettre",
+
+    /* ── Modale CV ── */
+    cv_modal_title: "Aperçu du CV",
+    cv_modal_download: "Télécharger",
+    cv_modal_close: "Fermer",
+
+    /* ── Chatbot ── */
+    chatbot_title: "Assistant Portfolio",
+    chatbot_placeholder: "Posez votre question…",
+    chatbot_welcome: "Bonjour ! 👋 Je suis l'assistant de Mathis. Posez-moi vos questions sur son profil, ses compétences, ses expériences ou ses disponibilités.",
+    chatbot_no_answer: "Je n'ai pas de réponse précise à cette question. N'hésitez pas à utiliser le formulaire de contact pour plus d'informations !",
+
+    /* ── Footer ── */
+    footer_text: "&copy; 2026 Mathis Vincent - Tous droits réservés",
   },
+
   en: {
+    /* ── Navigation ── */
     nav_brand: "Mathis Vincent",
     nav_home: "Home",
     nav_experiences: "Experience",
     nav_competences: "Skills",
     nav_benevolat: "Volunteering",
+    nav_avis: "Company Reviews",
     nav_contact: "Contact",
     nav_cv: "Download my CV",
     language_toggle_label: "Switch website language",
+    dark_mode_label: "Toggle dark mode",
+
+    /* ── Home ── */
     home_intro: "Hello, I am",
     home_name: "Mathis Vincent",
     home_role:
-      "Computer & Network Engineering student (ESAIP) — 4th year",
+      "Computer &amp; Network Engineering student (ESAIP) — 4th year",
     home_objective:
-      "Goal: Looking for a 2-month internship in summer 2025 (software dev, IT support, automation).",
+      "Goal: Looking for a 2-month internship in 2026 or a 6-month work-study from January to June 2027 (software dev, IT support, automation).",
     home_contact_button: "Contact me",
-    home_section_title: "Profile & objective",
+    home_section_title: "Profile &amp; objective",
     home_section_subtitle:
       "Curious, methodical and people-focused, I build clear solutions that help teams every day.",
     home_about_title: "Result-oriented vision",
@@ -145,16 +199,20 @@ const translations = {
     home_strengths_title: "Daily strengths",
     home_strengths_text:
       "Autonomy, responsiveness and service mindset for both users and project squads.",
-    home_focus_title: "Heading to 2025",
+    home_focus_title: "Heading to 2026-2027",
     home_focus_text:
-      "Deepening software automation and IT process industrialization during my next internship.",
+      "Deepening software automation and IT process industrialization during my next internship or work-study.",
+    home_photo_alt: "Professional portrait of Mathis Vincent",
+
+    /* ── Experience ── */
     exp_title: "Professional experience",
     exp_subtitle:
       "Assignments mixing IT support, scripting and operational coordination.",
     exp_sigmas_title: "3Sigmas-Studios startup",
     exp_sigmas_period: "2025 &middot; 3 months &middot; Budapest",
     exp_sigmas_point1: "Python scripts to speed up internal workflows.",
-    exp_sigmas_point2: "Structured technical documentation for the team.",
+    exp_sigmas_point2:
+      "Structured technical documentation for the team.",
     exp_sigmas_point3: "Involvement in intern recruitment sessions.",
     exp_sigmas_point4: "Automation of in-house tools to save time.",
     exp_ava6_title: "AVA6 Limonest",
@@ -172,6 +230,8 @@ const translations = {
     exp_fruit_point1:
       "Daily logistics planning while respecting tight schedules.",
     exp_fruit_point2: "Outdoor teamwork and strong work ethic.",
+
+    /* ── Skills ── */
     skills_title: "Key skills",
     skills_subtitle:
       "A versatile technical foundation supported by solid soft skills.",
@@ -195,20 +255,23 @@ const translations = {
     skill_adaptability: "Adaptability",
     skill_customer_service: "Customer service mindset",
     skill_autonomy: "Autonomy",
+
+    /* ── Volunteering ── */
     benev_title: "Volunteering",
     benev_subtitle:
       "Regular commitments to stay close to grassroots initiatives.",
     benev_cop1_badge: "Cop1 Student Solidarity",
-    benev_cop1_title: "Volunteer Commitment &ndash; Cop1 Student Solidarity",
+    benev_cop1_title:
+      "Volunteer Commitment &ndash; Cop1 Student Solidarity",
     benev_cop1_text:
       "Since my 3rd year of engineering school, and still today in 4th year, I have been involved with Cop1 Solidarités Étudiantes in Angers. The non-profit supports students facing hardship through free distributions of food, hygiene products, clothing and safe moments to talk. I volunteer in the evenings on a regular basis, helping with set-up, distribution, stock refills and clean-up. This ongoing work strengthens my sense of teamwork, solidarity, organization and active listening while staying connected to the realities of field initiatives.",
     benev_cop1_alt: "Cop1 volunteers supporting students",
-    benev_card1_title: "Outreach & meal distribution",
+    benev_card1_title: "Outreach &amp; meal distribution",
     benev_card1_context: "On-the-ground support",
     benev_card1_desc:
       "Welcoming people, preparing bags and sharing useful information.",
     benev_card2_title: "Community events",
-    benev_card2_context: "Animation & coordination",
+    benev_card2_context: "Animation &amp; coordination",
     benev_card2_desc:
       "Setting up booths, guiding visitors and handling logistics.",
     benev_card3_title: "Logistics organization",
@@ -218,31 +281,54 @@ const translations = {
     benev_card1_alt: "Volunteers distributing meals",
     benev_card2_alt: "Volunteer helping during a community event",
     benev_card3_alt: "Logistics support during a donation drive",
+
+    /* ── Contact ── */
     contact_title: "Get in touch",
     contact_subtitle:
-      "Available for a 2-month internship starting June 2025. Let's discuss your needs.",
+      "Available for a 2-month internship in 2026 or a 6-month work-study (January-June 2027). Let's discuss your needs.",
     contact_info_note: "I reply quickly by email or phone.",
     contact_info_email_title: "Email",
     contact_info_phone_title: "Phone",
     contact_info_address_title: "Address",
     contact_info_linkedin_title: "LinkedIn",
-    contact_email_label: "Email: mathisvincent446@gmail.com",
-    contact_phone_label: "Phone: +33 6 77 07 42 51",
-    contact_address_label: "Address: 43 bis Rue du 8 mai 1945, 49124",
-    contact_linkedin_label: "LinkedIn : linkedin.com/in/mathis-vincent-224b24257",
+    contact_email_label: "mathisvincent446@gmail.com",
+    contact_phone_label: "+33 6 77 07 42 51",
+    contact_address_label: "43 bis Rue du 8 mai 1945, 49124",
+    contact_linkedin_label: "linkedin.com/in/mathis-vincent-224b24257",
     contact_form_title: "Contact form",
     contact_form_name: "Full name",
     contact_form_email: "Email",
     contact_form_message: "Message",
-    contact_form_button: "Send (demo)",
+    contact_form_button: "Send",
     contact_placeholder_name: "Your name",
     contact_placeholder_email: "Your email",
     contact_placeholder_message: "Your message",
-    home_photo_alt: "Professional portrait of Mathis Vincent",
-    footer_text: "&copy; 2025 Mathis Vincent - All rights reserved",
+    contact_form_success: "Message sent successfully! I will get back to you shortly.",
+    contact_form_error: "An error occurred. Please try again.",
+    contact_form_validation: "Please fill in all fields.",
+
+    /* ── Company Reviews ── */
+    avis_title: "Company Reviews",
+    avis_subtitle: "Feedback and recommendations from companies I have worked with.",
+    avis_see_letter: "See the letter",
+
+    /* ── CV Modal ── */
+    cv_modal_title: "CV Preview",
+    cv_modal_download: "Download",
+    cv_modal_close: "Close",
+
+    /* ── Chatbot ── */
+    chatbot_title: "Portfolio Assistant",
+    chatbot_placeholder: "Ask your question…",
+    chatbot_welcome: "Hello! 👋 I'm Mathis's portfolio assistant. Ask me anything about his profile, skills, experience or availability.",
+    chatbot_no_answer: "I don't have a precise answer to that question. Feel free to use the contact form for more information!",
+
+    /* ── Footer ── */
+    footer_text: "&copy; 2026 Mathis Vincent - All rights reserved",
   },
 };
 
+/* ── Apply translations ── */
 function applyLanguage(lang) {
   const selectedLang = translations[lang] ? lang : "fr";
   const dict = translations[selectedLang];
