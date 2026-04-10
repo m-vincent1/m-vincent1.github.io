@@ -65,6 +65,12 @@ const translations = {
     exp_fruit_point1: "Organisation logistique quotidienne et respect des cadences.",
     exp_fruit_point2: "Travail d'équipe en extérieur et sens de l'effort.",
     exp_avis_button: "Avis entreprise",
+    exp_clickwars_title: "Projet ClickWars Territory &middot; 3Sigmas-Studios",
+    exp_clickwars_period: "2025 &middot; 1 mois &middot; Angers",
+    exp_clickwars_point1: "Développement d'un party game multijoueur local avec Qt 6 / QML et C++.",
+    exp_clickwars_point2: "Conception de l'architecture réseau LAN pour le mode 2v2 en temps réel.",
+    exp_clickwars_point3: "Création de composants QML réutilisables (écrans, overlays, styles).",
+    exp_clickwars_point4: "Intégration de bots IA et gestion du scoring par territoire.",
 
     /* ── Compétences ── */
     skills_title: "Compétences clés",
@@ -94,6 +100,13 @@ const translations = {
     skill_problem_solving: "Résolution de problème",
     skill_adaptability: "Adaptabilité",
     skill_flexibility: "Flexibilité",
+
+    /* ── Centre d'intérêt ── */
+    interests_title: "Centre d'intérêt",
+    interest_boxing: "Boxe",
+    interest_football: "Football",
+    interest_gym: "Salle de sport",
+    interest_gaming: "Jeux vidéo",
 
     /* ── Bénévolat ── */
     benev_title: "Actions de bénévolat",
@@ -209,6 +222,12 @@ const translations = {
     exp_fruit_point1: "Daily logistics planning while respecting tight schedules.",
     exp_fruit_point2: "Outdoor teamwork and strong work ethic.",
     exp_avis_button: "Company Review",
+    exp_clickwars_title: "ClickWars Territory Project &middot; 3Sigmas-Studios",
+    exp_clickwars_period: "2025 &middot; 1 month &middot; Angers",
+    exp_clickwars_point1: "Developed a local multiplayer party game with Qt 6 / QML and C++.",
+    exp_clickwars_point2: "Designed LAN network architecture for real-time 2v2 mode.",
+    exp_clickwars_point3: "Created reusable QML components (screens, overlays, styles).",
+    exp_clickwars_point4: "Integrated AI bots and territory-based scoring system.",
 
     /* ── Skills ── */
     skills_title: "Key skills",
@@ -235,6 +254,13 @@ const translations = {
     skill_problem_solving: "Problem Solving",
     skill_adaptability: "Adaptability",
     skill_flexibility: "Flexibility",
+
+    /* ── Interests ── */
+    interests_title: "Interests",
+    interest_boxing: "Boxing",
+    interest_football: "Football",
+    interest_gym: "Gym",
+    interest_gaming: "Video Games",
 
     /* ── Volunteering ── */
     benev_title: "Volunteering",
