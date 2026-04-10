@@ -179,18 +179,18 @@ function initAvisButtons() {
    ============================================================ */
 function createSideAnimations() {
   const leftContainer = document.createElement("div");
-  leftContainer.className = "fixed left-0 xl:left-4 top-0 w-24 h-full pointer-events-none z-0 hidden lg:flex gap-4 justify-center overflow-hidden";
+  leftContainer.className = "fixed left-0 top-0 w-[calc(50vw-32rem)] h-full pointer-events-none z-0 hidden lg:flex gap-6 xl:gap-10 justify-center overflow-hidden";
   
   const rightContainer = document.createElement("div");
-  rightContainer.className = "fixed right-0 xl:right-4 top-0 w-24 h-full pointer-events-none z-0 hidden lg:flex gap-4 justify-center overflow-hidden";
+  rightContainer.className = "fixed right-0 top-0 w-[calc(50vw-32rem)] h-full pointer-events-none z-0 hidden lg:flex gap-6 xl:gap-10 justify-center overflow-hidden";
 
   function createTrack(isUp) {
     const track = document.createElement("div");
-    track.className = "relative w-12 h-full";
+    track.className = "relative w-16 xl:w-24 h-full";
     for (let i = 0; i < 5; i++) {
         const block = document.createElement("div");
-        block.className = `w-12 h-40 rounded-xl absolute ${isUp ? 'anim-block-up' : 'anim-block-down'}`;
-        block.style.animationDelay = `${i * (20 / 5)}s`;
+        block.className = `w-16 xl:w-24 h-56 xl:h-72 rounded-2xl absolute ${isUp ? 'anim-block-up' : 'anim-block-down'}`;
+        block.style.animationDelay = `-${(i * 4.8).toFixed(1)}s`;
         track.appendChild(block);
     }
     return track;
