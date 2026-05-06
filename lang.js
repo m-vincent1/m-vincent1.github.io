@@ -24,7 +24,7 @@ const translations = {
     home_role:
       "Étudiant ingénieur en Informatique &amp; Réseaux (ESAIP) — 4ème année",
     home_objective:
-      "Objectif : Recherche un stage de 2 mois pour 2026 ou une alternance de 6 mois de janvier 2027 à juin 2027 (dev logiciel, support IT, automatisation).",
+      "Objectif : Recherche un stage de 2 mois pour 2026 ou un stage de 6 mois de janvier 2027 à juin 2027 (dev logiciel, support IT, automatisation).",
     home_contact_button: "Me contacter",
     home_section_title: "Profil &amp; objectif",
     home_section_subtitle:
@@ -37,7 +37,7 @@ const translations = {
       "Autonomie, réactivité et sens du service pour accompagner les utilisateurs comme les équipes projet.",
     home_focus_title: "Cap sur 2026-2027",
     home_focus_text:
-      "Approfondir l'automatisation logicielle et l'industrialisation des processus IT durant mon prochain stage ou alternance.",
+      "Approfondir l'automatisation logicielle et l'industrialisation des processus IT durant mon prochain stage.",
     home_photo_alt: "Portrait professionnel de Mathis Vincent",
 
     /* ── Expériences ── */
@@ -121,7 +121,7 @@ const translations = {
     /* ── Contact ── */
     contact_title: "Me contacter",
     contact_subtitle:
-      "Disponible pour un stage de 2 mois pour 2026 ou une alternance de 6 mois (janvier-juin 2027). Discutons de vos besoins.",
+      "Disponible pour un stage de 2 mois pour 2026 ou un stage de 6 mois (janvier-juin 2027). Discutons de vos besoins.",
     contact_info_note: "Je réponds rapidement par mail ou téléphone.",
     contact_info_email_title: "Email",
     contact_info_phone_title: "Téléphone",
@@ -182,7 +182,7 @@ const translations = {
     home_name: "Mathis Vincent",
     home_role: "Computer &amp; Network Engineering student (ESAIP) — 4th year",
     home_objective:
-      "Goal: Looking for a 2-month internship in 2026 or a 6-month work-study from January to June 2027 (software dev, IT support, automation).",
+      "Goal: Looking for a 2-month internship in 2026 or a 6-month internship from January to June 2027 (software dev, IT support, automation).",
     home_contact_button: "Contact me",
     home_section_title: "Profile &amp; objective",
     home_section_subtitle:
@@ -195,7 +195,7 @@ const translations = {
       "Autonomy, responsiveness and service mindset for both users and project squads.",
     home_focus_title: "Heading to 2026-2027",
     home_focus_text:
-      "Deepening software automation and IT process industrialization during my next internship or work-study.",
+      "Deepening software automation and IT process industrialization during my next internship.",
     home_photo_alt: "Professional portrait of Mathis Vincent",
 
     /* ── Experience ── */
@@ -273,7 +273,7 @@ const translations = {
 
     /* ── Contact ── */
     contact_title: "Get in touch",
-    contact_subtitle: "Available for a 2-month internship in 2026 or a 6-month work-study (January-June 2027). Let's discuss your needs.",
+    contact_subtitle: "Available for a 2-month internship in 2026 or a 6-month internship (January-June 2027). Let's discuss your needs.",
     contact_info_note: "I reply quickly by email or phone.",
     contact_info_email_title: "Email",
     contact_info_phone_title: "Phone",
