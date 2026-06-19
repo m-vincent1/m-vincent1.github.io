@@ -212,9 +212,10 @@ function createSideAnimations() {
 const chatbotKnowledge = {
   fr: {
     profil: "Mathis Vincent est étudiant ingénieur en 4ème année à l'ESAIP, spécialisé en Informatique & Réseaux. Il est curieux, méthodique et orienté résultats.",
-    competences: "Mathis maîtrise Python, C++, Java, le support IT, la maintenance informatique, les réseaux, HTML/CSS, QML/Felgo, la cybersécurité, UML, AWS Cloud et SQL. En soft skills : communication efficace, esprit d'équipe, service client, apprentissage rapide, motivation, résolution de problèmes, adaptabilité et flexibilité.",
+    competences: "Mathis maîtrise Python, C++, Java, le support IT, les réseaux, HTML/CSS, QML/Felgo, UML, AWS Cloud, SQL, Linux / Windows Server, la configuration PC et l'analyse de logs. Il utilise aussi Wireshark, Nmap, Burp Suite, Metasploit, John the Ripper, Hashcat, SQLmap, Gobuster, Nikto, Volatility et Autopsy.",
+    projets: "Les projets GitHub épinglés de Mathis incluent ChessDeck, Incident Response Timeline Builder, Purple Team Attack Simulator, Supply Chain Security Scanner et son portfolio GitHub Pages.",
     experiences: "Mathis a réalisé un stage de 3 mois chez 3Sigmas-Studios à Budapest (2025), un stage de 2 mois chez AVA6 à Lyon (2023), un stage d'1 mois au Lycée Les Lazaristes (2021), et un travail saisonnier de cueillette de fruits (2023).",
-    disponibilite: "Mathis recherche un stage de 2 mois pour 2026 ou un stage de 6 mois de janvier 2027 à juin 2027.",
+    disponibilite: "Mathis recherche un stage de 6 mois de janvier 2027 à juin 2027.",
     contact: "Vous pouvez contacter Mathis par email à mathisvincent446@gmail.com ou par téléphone au +33 6 77 07 42 51.",
     benevolat: "Mathis est bénévole depuis sa 3ème année chez Cop1 Solidarités Étudiantes à Angers, où il participe aux distributions alimentaires et au soutien des étudiants en précarité.",
     formation: "Mathis est actuellement en 4ème année d'ingénieur à l'ESAIP, spécialisation Informatique & Réseaux.",
@@ -223,9 +224,10 @@ const chatbotKnowledge = {
   },
   en: {
     profil: "Mathis Vincent is a 4th-year engineering student at ESAIP, specializing in Computer & Network Engineering. He is curious, methodical and result-oriented.",
-    competences: "Mathis is skilled in Python, C++, Java, IT support, hardware maintenance, networks, HTML/CSS, QML/Felgo, cybersecurity, UML, AWS Cloud and SQL. Soft skills: effective communication, teamwork, customer service, quick learner, motivated, problem solving, adaptability and flexibility.",
+    competences: "Mathis is skilled in Python, C++, Java, IT support, networks, HTML/CSS, QML/Felgo, UML, AWS Cloud, SQL, Linux / Windows Server, PC configuration and log analysis. He also uses Wireshark, Nmap, Burp Suite, Metasploit, John the Ripper, Hashcat, SQLmap, Gobuster, Nikto, Volatility and Autopsy.",
+    projets: "Mathis's pinned GitHub projects include ChessDeck, Incident Response Timeline Builder, Purple Team Attack Simulator, Supply Chain Security Scanner and his GitHub Pages portfolio.",
     experiences: "Mathis completed a 3-month internship at 3Sigmas-Studios in Budapest (2025), a 2-month internship at AVA6 in Lyon (2023), a 1-month internship at Lycée Les Lazaristes (2021), and seasonal fruit picking work (2023).",
-    disponibilite: "Mathis is looking for a 2-month internship in 2026 or a 6-month internship from January to June 2027.",
+    disponibilite: "Mathis is looking for a 6-month internship from January to June 2027.",
     contact: "You can reach Mathis by email at mathisvincent446@gmail.com or by phone at +33 6 77 07 42 51.",
     benevolat: "Mathis has been volunteering since his 3rd year with Cop1 Solidarités Étudiantes in Angers.",
     formation: "Mathis is currently in his 4th year of engineering at ESAIP, specializing in Computer & Network Engineering.",
@@ -237,6 +239,7 @@ const chatbotKnowledge = {
 const chatbotKeywords = {
   profil: ["profil", "profile", "qui", "who", "présente", "introduce", "about", "toi", "you", "mathis"],
   competences: ["compétence", "competence", "skill", "technique", "technical", "python", "html", "css", "network", "réseau", "cyber", "aws", "cloud", "uml", "soft", "java", "c++", "sql", "qml", "felgo"],
+  projets: ["projet", "project", "github", "repo", "repository", "dépôt", "depot", "chessdeck", "purple", "supply", "dfir", "timeline", "portfolio"],
   experiences: ["expérience", "experience", "stage", "internship", "travail", "work", "emploi", "job", "ava6", "sigmas", "lazaristes", "fruit", "budapest", "lyon"],
   disponibilite: ["disponible", "available", "disponibilité", "availability", "recherche", "looking", "stage", "alternance", "work-study", "2026", "2027"],
   contact: ["contact", "email", "mail", "téléphone", "phone", "joindre", "reach"],

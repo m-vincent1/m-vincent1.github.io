@@ -9,7 +9,9 @@ const translations = {
     nav_home: "Accueil",
     nav_experiences: "Expériences",
     nav_competences: "Compétences",
+    nav_projects: "Projets",
     nav_benevolat: "Bénévolat",
+    nav_interets: "Intérêts",
     nav_contact: "Contact",
     nav_cv: "Télécharger mon CV",
     language_toggle_label: "Changer la langue",
@@ -24,7 +26,7 @@ const translations = {
     home_role:
       "Étudiant ingénieur en Informatique &amp; Réseaux (ESAIP) — 4ème année",
     home_objective:
-      "Objectif : Recherche un stage de 2 mois pour 2026 ou un stage de 6 mois de janvier 2027 à juin 2027 (dev logiciel, support IT, automatisation, cybersécurité).",
+      "Objectif : Recherche un stage de 6 mois de janvier 2027 à juin 2027 (dev logiciel, support IT, automatisation, cybersécurité).",
     home_contact_button: "Me contacter",
     home_section_title: "Profil &amp; objectif",
     home_section_subtitle:
@@ -82,16 +84,22 @@ const translations = {
     skills_soft_title: "Soft skills",
     skills_soft_desc:
       "Savoir-être au service des utilisateurs et des équipes projet.",
+    skills_tools_title: "Logiciels / Outils",
+    skills_tools_desc:
+      "Outils utilisés en cybersécurité, analyse réseau, audit web et investigation numérique.",
     skill_python: "Python / C++ / Java",
     skill_support: "Maintenance / Support IT",
     skill_logistics: "Gestion logistique",
-    skill_networks: "Réseaux (bases)",
+    skill_networks: "Réseaux",
     skill_html: "HTML / CSS",
     skill_qml: "QML / Felgo",
     skill_cyber: "Cybersécurité",
     skill_uml: "UML",
     skill_cloud: "Cloud (AWS)",
     skill_sql: "SQL",
+    skill_linux_windows: "Linux / Windows Server",
+    skill_pc_config: "Configuration PC",
+    skill_log_analysis: "Analyse de logs",
     skill_communication: "Communication efficace",
     skill_teamwork: "Esprit d'équipe",
     skill_customer_service: "Service à la clientèle",
@@ -101,12 +109,76 @@ const translations = {
     skill_adaptability: "Adaptabilité",
     skill_flexibility: "Flexibilité",
 
-    /* ── Centre d'intérêt ── */
-    interests_title: "Centre d'intérêt",
-    interest_boxing: "Boxe",
-    interest_football: "Football",
-    interest_gym: "Salle de sport",
-    interest_gaming: "Jeux vidéo",
+    /* ── Projets ── */
+    projects_page_label: "Projets GitHub",
+    projects_page_subtitle:
+      "Une sélection de projets autour de la cybersécurité, du développement logiciel et du web.",
+    project_link: "Voir le dépôt",
+    project_chessdeck_title: "ChessDeck",
+    project_chessdeck_point1:
+      "Jeu d'échecs web avec interface HTML/CSS/JavaScript et logique côté projet.",
+    project_chessdeck_point2:
+      "Intégration de Stockfish pour enrichir l'analyse et le comportement de jeu.",
+    project_ir_title: "Incident Response Timeline Builder",
+    project_ir_point1:
+      "Plateforme DFIR / Blue Team pour reconstruire une chronologie d'incident.",
+    project_ir_point2:
+      "Corrélation de logs, mapping MITRE ATT&CK et génération de rapports d'investigation.",
+    project_portfolio_title: "Portfolio GitHub Pages",
+    project_portfolio_point1: "Site portfolio personnel publié avec GitHub Pages.",
+    project_portfolio_point2:
+      "Pages dédiées au profil, aux compétences, expériences, bénévolat et contact.",
+    project_purple_title: "Purple Team Attack Simulator",
+    project_purple_point1:
+      "Laboratoire local pour simuler des comportements d'attaquants de manière contrôlée.",
+    project_purple_point2:
+      "Génération de logs synthétiques, validation de détections et rapports de couverture SOC.",
+    project_supply_title: "Supply Chain Security Scanner",
+    project_supply_point1:
+      "Outil DevSecOps pour analyser les dépendances et les risques de supply chain logicielle.",
+    project_supply_point2:
+      "Détection de composants vulnérables, score de risque global et rapports exploitables.",
+
+    /* ── Centres d'intérêts (page dédiée) ── */
+    interests_page_label: "Centres d'intérêts",
+    interests_page_subtitle:
+      "Des activités qui développent ma curiosité, ma rigueur et mon esprit d'équipe.",
+    interest_block_sports: "Sport",
+    interest_block_voyages: "Voyages",
+    interest_block_gaming: "Jeux vidéo",
+    interest_block_cyber: "Cybersécurité",
+    interest_block_dev: "Développement informatique",
+    interest_card_gain: "Ce que ça m'apporte",
+    interest_sports_focus: "Discipline",
+    interest_sports_text:
+      "Boxe, football et salle de sport : des activités qui m'aident à rester discipliné.",
+    interest_sports_tag1: "Rigueur",
+    interest_sports_tag2: "Persévérance",
+    interest_sports_tag3: "Énergie",
+    interest_voyages_focus: "Ouverture",
+    interest_voyages_text:
+      "J'aime découvrir de nouveaux pays et m'ouvrir à d'autres cultures.",
+    interest_voyages_tag1: "Curiosité",
+    interest_voyages_tag2: "Adaptation",
+    interest_voyages_tag3: "Découverte",
+    interest_gaming_focus: "Détente",
+    interest_gaming_text:
+      "J'aime jouer pour me détendre depuis que je suis enfant.",
+    interest_gaming_tag1: "Réflexion",
+    interest_gaming_tag2: "Patience",
+    interest_gaming_tag3: "Concentration",
+    interest_cyber_focus: "Veille technique",
+    interest_cyber_text:
+      "Je me forme régulièrement avec des vidéos, articles et forums spécialisés.",
+    interest_cyber_tag1: "Méthode",
+    interest_cyber_tag2: "Analyse",
+    interest_cyber_tag3: "Veille",
+    interest_dev_focus: "Création",
+    interest_dev_text:
+      "J'aime créer des sites et automatiser des tâches utiles par le code.",
+    interest_dev_tag1: "Logique",
+    interest_dev_tag2: "Autonomie",
+    interest_dev_tag3: "Utilité",
 
     /* ── Bénévolat ── */
     benev_title: "Actions de bénévolat",
@@ -121,7 +193,7 @@ const translations = {
     /* ── Contact ── */
     contact_title: "Me contacter",
     contact_subtitle:
-      "Disponible pour un stage de 2 mois pour 2026 ou un stage de 6 mois (janvier-juin 2027). Discutons de vos besoins.",
+      "Disponible pour un stage de 6 mois (janvier-juin 2027). Discutons de vos besoins.",
     contact_info_note: "Je réponds rapidement par mail ou téléphone.",
     contact_info_email_title: "Email",
     contact_info_phone_title: "Téléphone",
@@ -168,7 +240,9 @@ const translations = {
     nav_home: "Home",
     nav_experiences: "Experience",
     nav_competences: "Skills",
+    nav_projects: "Projects",
     nav_benevolat: "Volunteering",
+    nav_interets: "Interests",
     nav_contact: "Contact",
     nav_cv: "Download my CV",
     language_toggle_label: "Switch language",
@@ -182,7 +256,7 @@ const translations = {
     home_name: "Mathis Vincent",
     home_role: "Computer &amp; Network Engineering student (ESAIP) — 4th year",
     home_objective:
-      "Goal: Looking for a 2-month internship in 2026 or a 6-month internship from January to June 2027 (software dev, IT support, automation, cybersecurity).",
+      "Goal: Looking for a 6-month internship from January to June 2027 (software dev, IT support, automation, cybersecurity).",
     home_contact_button: "Contact me",
     home_section_title: "Profile &amp; objective",
     home_section_subtitle:
@@ -236,16 +310,22 @@ const translations = {
     skills_technical_desc: "Robust bases to work from support to automation topics.",
     skills_soft_title: "Soft skills",
     skills_soft_desc: "People skills dedicated to users and cross-functional teams.",
+    skills_tools_title: "Software / Tools",
+    skills_tools_desc:
+      "Tools used in cybersecurity, network analysis, web auditing and digital forensics.",
     skill_python: "Python / C++ / Java",
     skill_support: "Maintenance / IT Support",
     skill_logistics: "Logistics Management",
-    skill_networks: "Networks (basics)",
+    skill_networks: "Networks",
     skill_html: "HTML / CSS",
     skill_qml: "QML / Felgo",
     skill_cyber: "Cybersecurity",
     skill_uml: "UML",
     skill_cloud: "Cloud (AWS)",
     skill_sql: "SQL",
+    skill_linux_windows: "Linux / Windows Server",
+    skill_pc_config: "PC Configuration",
+    skill_log_analysis: "Log Analysis",
     skill_communication: "Effective Communication",
     skill_teamwork: "Teamwork",
     skill_customer_service: "Customer Service",
@@ -255,12 +335,76 @@ const translations = {
     skill_adaptability: "Adaptability",
     skill_flexibility: "Flexibility",
 
-    /* ── Interests ── */
-    interests_title: "Interests",
-    interest_boxing: "Boxing",
-    interest_football: "Football",
-    interest_gym: "Gym",
-    interest_gaming: "Video Games",
+    /* ── Projects ── */
+    projects_page_label: "GitHub Projects",
+    projects_page_subtitle:
+      "A selection of projects around cybersecurity, software development and the web.",
+    project_link: "View repository",
+    project_chessdeck_title: "ChessDeck",
+    project_chessdeck_point1:
+      "Web chess game with an HTML/CSS/JavaScript interface and project-side logic.",
+    project_chessdeck_point2:
+      "Stockfish integration to improve analysis and gameplay behavior.",
+    project_ir_title: "Incident Response Timeline Builder",
+    project_ir_point1:
+      "DFIR / Blue Team platform for rebuilding an incident timeline.",
+    project_ir_point2:
+      "Log correlation, MITRE ATT&CK mapping and investigation report generation.",
+    project_portfolio_title: "GitHub Pages Portfolio",
+    project_portfolio_point1: "Personal portfolio website published with GitHub Pages.",
+    project_portfolio_point2:
+      "Pages dedicated to profile, skills, experience, volunteering and contact.",
+    project_purple_title: "Purple Team Attack Simulator",
+    project_purple_point1:
+      "Local lab for safely simulating attacker behaviors in a controlled way.",
+    project_purple_point2:
+      "Synthetic log generation, detection validation and SOC coverage reports.",
+    project_supply_title: "Supply Chain Security Scanner",
+    project_supply_point1:
+      "DevSecOps tool for analyzing dependencies and software supply chain risks.",
+    project_supply_point2:
+      "Vulnerable component detection, global risk scoring and actionable reports.",
+
+    /* ── Interests (dedicated page) ── */
+    interests_page_label: "Interests",
+    interests_page_subtitle:
+      "Activities that develop my curiosity, discipline and team spirit.",
+    interest_block_sports: "Sports",
+    interest_block_voyages: "Travel",
+    interest_block_gaming: "Video Games",
+    interest_block_cyber: "Cybersecurity",
+    interest_block_dev: "Software Development",
+    interest_card_gain: "What it brings me",
+    interest_sports_focus: "Discipline",
+    interest_sports_text:
+      "Boxing, football and gym training help me stay disciplined.",
+    interest_sports_tag1: "Rigor",
+    interest_sports_tag2: "Persistence",
+    interest_sports_tag3: "Energy",
+    interest_voyages_focus: "Open-mindedness",
+    interest_voyages_text:
+      "I enjoy discovering new countries and opening up to other cultures.",
+    interest_voyages_tag1: "Curiosity",
+    interest_voyages_tag2: "Adaptation",
+    interest_voyages_tag3: "Discovery",
+    interest_gaming_focus: "Relaxation",
+    interest_gaming_text:
+      "I have played to relax since childhood.",
+    interest_gaming_tag1: "Thinking",
+    interest_gaming_tag2: "Patience",
+    interest_gaming_tag3: "Focus",
+    interest_cyber_focus: "Technical watch",
+    interest_cyber_text:
+      "I keep learning through videos, articles and specialised forums.",
+    interest_cyber_tag1: "Method",
+    interest_cyber_tag2: "Analysis",
+    interest_cyber_tag3: "Monitoring",
+    interest_dev_focus: "Creation",
+    interest_dev_text:
+      "I like building websites and automating useful tasks with code.",
+    interest_dev_tag1: "Logic",
+    interest_dev_tag2: "Autonomy",
+    interest_dev_tag3: "Usefulness",
 
     /* ── Volunteering ── */
     benev_title: "Volunteering",
@@ -273,7 +417,7 @@ const translations = {
 
     /* ── Contact ── */
     contact_title: "Get in touch",
-    contact_subtitle: "Available for a 2-month internship in 2026 or a 6-month internship (January-June 2027). Let's discuss your needs.",
+    contact_subtitle: "Available for a 6-month internship (January-June 2027). Let's discuss your needs.",
     contact_info_note: "I reply quickly by email or phone.",
     contact_info_email_title: "Email",
     contact_info_phone_title: "Phone",
