@@ -46,6 +46,11 @@ const translations = {
     exp_title: "Expériences professionnelles",
     exp_subtitle:
       "Des missions variées autour du support IT, du développement et de la coordination opérationnelle.",
+    exp_it360_title: "Stage IT &amp; support client &middot; IT360 Chambery",
+    exp_it360_period: "2026 &middot; 2 mois &middot; Chambery",
+    exp_it360_point1: "Assistance hotline auprès des clients et prise en charge des demandes techniques.",
+    exp_it360_point2: "Gestion, suivi et résolution de tickets clients.",
+    exp_it360_point3: "Configuration et préparation de postes informatiques et serveurs selon les besoins clients.",
     exp_sigmas_title: "Startup 3Sigmas-Studios",
     exp_sigmas_period: "2025 &middot; 3 mois &middot; Budapest",
     exp_sigmas_point1: "Scripts Python pour accélérer les workflows internes.",
@@ -275,6 +280,11 @@ const translations = {
     /* ── Experience ── */
     exp_title: "Professional experience",
     exp_subtitle: "Assignments mixing IT support, scripting and operational coordination.",
+    exp_it360_title: "IT &amp; customer support internship &middot; IT360 Chambery",
+    exp_it360_period: "2026 &middot; 2 months &middot; Chambery",
+    exp_it360_point1: "Hotline support for customers and handling of technical requests.",
+    exp_it360_point2: "Management, follow-up and resolution of customer tickets.",
+    exp_it360_point3: "Configuration and preparation of workstations and servers according to customer needs.",
     exp_sigmas_title: "3Sigmas-Studios startup",
     exp_sigmas_period: "2025 &middot; 3 months &middot; Budapest",
     exp_sigmas_point1: "Python scripts to speed up internal workflows.",
