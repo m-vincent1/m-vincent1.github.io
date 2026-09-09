@@ -96,7 +96,7 @@ function createCVModal() {
 
   document.getElementById("cv-modal-close")?.addEventListener("click", closeCVModal);
   modal.addEventListener("click", (e) => { if (e.target === modal) closeCVModal(); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeCVModal(); closeAvisModal(); } });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeCVModal(); closeAvisModal(); closeCertificateModal(); } });
 }
 
 function openCVModal() {
@@ -141,12 +141,54 @@ function createAvisModal() {
   modal.addEventListener("click", (e) => { if (e.target === modal) closeAvisModal(); });
 }
 
-function openAvisModal(filePath) {
+let currentAvisFiles = [];
+let currentAvisIndex = 0;
+
+function renderAvisSlide() {
+  const body = document.getElementById("avis-modal-body");
+  if (!body || currentAvisFiles.length < 2) return;
+
+  const lang = localStorage.getItem("siteLanguage") || "fr";
+  const dict = translations[lang] || translations.fr;
+  const filePath = currentAvisFiles[currentAvisIndex];
+  body.innerHTML = `
+    <div class="relative flex h-full min-h-[28rem] items-center justify-center bg-slate-100 dark:bg-slate-900 rounded-lg overflow-hidden">
+      <img src="${filePath}" alt="${currentAvisIndex === 0 ? dict.avis_recto : dict.avis_verso}" class="h-full w-full object-contain" />
+      <button type="button" data-avis-direction="-1" class="absolute left-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-slate-800 shadow-lg hover:bg-white transition" aria-label="${dict.avis_previous}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button type="button" data-avis-direction="1" class="absolute right-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-slate-800 shadow-lg hover:bg-white transition" aria-label="${dict.avis_next}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+      <span class="absolute bottom-3 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white">${currentAvisIndex === 0 ? dict.avis_recto : dict.avis_verso} · ${currentAvisIndex + 1}/2</span>
+    </div>
+  `;
+
+  body.querySelectorAll("[data-avis-direction]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const direction = Number(button.dataset.avisDirection);
+      currentAvisIndex = (currentAvisIndex + direction + currentAvisFiles.length) % currentAvisFiles.length;
+      renderAvisSlide();
+    });
+  });
+}
+
+function openAvisModal(filePaths) {
   const modal = document.getElementById("avis-modal");
   const body = document.getElementById("avis-modal-body");
   if (!modal || !body) return;
 
-  // Detect file type
+  currentAvisFiles = Array.isArray(filePaths) ? filePaths : [filePaths];
+  currentAvisIndex = 0;
+  if (currentAvisFiles.length > 1) {
+    renderAvisSlide();
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.style.overflow = "hidden";
+    return;
+  }
+
+  const filePath = currentAvisFiles[0];
   const ext = filePath.split('.').pop().toLowerCase();
   if (ext === 'pdf') {
     body.innerHTML = `<iframe src="${filePath}" class="w-full h-full rounded-lg border-0" title="Avis entreprise"></iframe>`;
@@ -166,16 +208,83 @@ function closeAvisModal() {
 }
 
 function initAvisButtons() {
-  document.querySelectorAll("[data-avis-file]").forEach((btn) => {
+  document.querySelectorAll("[data-avis-file], [data-avis-files]").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      openAvisModal(btn.dataset.avisFile);
+      const files = btn.dataset.avisFiles ? btn.dataset.avisFiles.split("|") : btn.dataset.avisFile;
+      openAvisModal(files);
     });
   });
 }
 
 /* ============================================================
-   6. SIDE ANIMATIONS
+   6. CERTIFICATE MODAL
+   ============================================================ */
+function createCertificateModal() {
+  const modal = document.createElement("div");
+  modal.id = "certificate-modal";
+  modal.className = "fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4";
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.innerHTML = `
+    <div class="relative w-full max-w-5xl h-[90vh] bg-white dark:bg-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+      <div class="flex items-center justify-between gap-4 px-4 sm:px-6 py-4 border-b border-slate-200 dark:border-slate-700">
+        <h2 id="certificate-modal-title" class="min-w-0 text-base sm:text-lg font-semibold text-slate-900 dark:text-white truncate"></h2>
+        <div class="flex shrink-0 items-center gap-2 sm:gap-3">
+          <a id="certificate-modal-download" href="#" download class="inline-flex items-center gap-2 rounded-full bg-primary px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition" data-i18n="certificate_download">Télécharger</a>
+          <button id="certificate-modal-close" class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition" aria-label="Fermer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="certificate-modal-body" class="flex-1 min-h-0 overflow-auto bg-slate-100 dark:bg-slate-900 p-2"></div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  document.getElementById("certificate-modal-close")?.addEventListener("click", closeCertificateModal);
+  modal.addEventListener("click", (event) => { if (event.target === modal) closeCertificateModal(); });
+}
+
+function openCertificateModal(filePath, titleKey) {
+  const modal = document.getElementById("certificate-modal");
+  const body = document.getElementById("certificate-modal-body");
+  const title = document.getElementById("certificate-modal-title");
+  const download = document.getElementById("certificate-modal-download");
+  if (!modal || !body || !title || !download) return;
+
+  const lang = localStorage.getItem("siteLanguage") || "fr";
+  const dict = translations[lang] || translations.fr;
+  const displayTitle = dict[titleKey] || titleKey;
+  const ext = filePath.split(".").pop().toLowerCase();
+  title.innerHTML = displayTitle;
+  download.href = filePath;
+  body.innerHTML = ext === "pdf"
+    ? `<iframe src="${filePath}" class="w-full h-full min-h-[32rem] rounded-lg border-0" title="${displayTitle.replace(/<[^>]*>/g, "")}"></iframe>`
+    : `<img src="${filePath}" alt="${displayTitle.replace(/<[^>]*>/g, "")}" class="w-full h-full object-contain rounded-lg" />`;
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+  document.body.style.overflow = "hidden";
+}
+
+function closeCertificateModal() {
+  const modal = document.getElementById("certificate-modal");
+  if (modal) {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = "";
+  }
+}
+
+function initCertificateButtons() {
+  document.querySelectorAll("[data-certificate-file]").forEach((button) => {
+    button.addEventListener("click", () => {
+      openCertificateModal(button.dataset.certificateFile, button.dataset.certificateTitleKey);
+    });
+  });
+}
+
+/* ============================================================
+   7. SIDE ANIMATIONS
    ============================================================ */
 function createSideAnimations() {
   const leftContainer = document.createElement("div");
@@ -215,6 +324,7 @@ const chatbotKnowledge = {
     competences: "Mathis maîtrise Python, C++, Java, le support IT, les réseaux, HTML/CSS, QML/Felgo, UML, AWS Cloud, SQL, Linux / Windows Server, la configuration PC et l'analyse de logs. Il utilise aussi Wireshark, Nmap, Burp Suite, Metasploit, John the Ripper, Hashcat, SQLmap, Gobuster, Nikto, Volatility et Autopsy.",
     projets: "Les projets GitHub épinglés de Mathis incluent ChessDeck, Incident Response Timeline Builder, Purple Team Attack Simulator, Supply Chain Security Scanner et son portfolio GitHub Pages.",
     experiences: "Mathis a réalisé un stage de 2 mois chez IT360 à Chambery (2026), un stage de 3 mois chez 3Sigmas-Studios à Budapest (2025), un stage de 2 mois chez AVA6 à Lyon (2023), un stage d'1 mois au Lycée Les Lazaristes (2021), et un travail saisonnier de cueillette de fruits (2023).",
+    certifications: "Mathis possède des validations en cybersécurité délivrées par Fortinet Training Institute, Cisco Networking Academy, l'ANSSI via SecNumacadémie et CodeRed. Son relevé d'examen CEH est également consultable sur la page Certifications.",
     disponibilite: "Mathis recherche un stage de 6 mois de janvier 2027 à juin 2027.",
     contact: "Vous pouvez contacter Mathis par email à mathisvincent446@gmail.com ou par téléphone au +33 6 77 07 42 51.",
     benevolat: "Mathis est bénévole depuis sa 3ème année chez Cop1 Solidarités Étudiantes à Angers, où il participe aux distributions alimentaires et au soutien des étudiants en précarité.",
@@ -227,6 +337,7 @@ const chatbotKnowledge = {
     competences: "Mathis is skilled in Python, C++, Java, IT support, networks, HTML/CSS, QML/Felgo, UML, AWS Cloud, SQL, Linux / Windows Server, PC configuration and log analysis. He also uses Wireshark, Nmap, Burp Suite, Metasploit, John the Ripper, Hashcat, SQLmap, Gobuster, Nikto, Volatility and Autopsy.",
     projets: "Mathis's pinned GitHub projects include ChessDeck, Incident Response Timeline Builder, Purple Team Attack Simulator, Supply Chain Security Scanner and his GitHub Pages portfolio.",
     experiences: "Mathis completed a 2-month internship at IT360 in Chambery (2026), a 3-month internship at 3Sigmas-Studios in Budapest (2025), a 2-month internship at AVA6 in Lyon (2023), a 1-month internship at Lycée Les Lazaristes (2021), and seasonal fruit picking work (2023).",
+    certifications: "Mathis has cybersecurity credentials from Fortinet Training Institute, Cisco Networking Academy, ANSSI through SecNumacadémie and CodeRed. His CEH exam transcript is also available on the Certifications page.",
     disponibilite: "Mathis is looking for a 6-month internship from January to June 2027.",
     contact: "You can reach Mathis by email at mathisvincent446@gmail.com or by phone at +33 6 77 07 42 51.",
     benevolat: "Mathis has been volunteering since his 3rd year with Cop1 Solidarités Étudiantes in Angers.",
@@ -241,6 +352,7 @@ const chatbotKeywords = {
   competences: ["compétence", "competence", "skill", "technique", "technical", "python", "html", "css", "network", "réseau", "cyber", "aws", "cloud", "uml", "soft", "java", "c++", "sql", "qml", "felgo"],
   projets: ["projet", "project", "github", "repo", "repository", "dépôt", "depot", "chessdeck", "purple", "supply", "dfir", "timeline", "portfolio"],
   experiences: ["expérience", "experience", "stage", "internship", "travail", "work", "emploi", "job", "it360", "chambery", "ava6", "sigmas", "lazaristes", "fruit", "budapest", "lyon"],
+  certifications: ["certification", "certificate", "certificat", "attestation", "fortinet", "nse", "cisco", "anssi", "secnum", "ceh", "ec-council", "codered"],
   disponibilite: ["disponible", "available", "disponibilité", "availability", "recherche", "looking", "stage", "alternance", "work-study", "2026", "2027"],
   contact: ["contact", "email", "mail", "téléphone", "phone", "joindre", "reach"],
   benevolat: ["bénévolat", "volunteering", "volunteer", "cop1", "association", "solidarité", "solidarity"],
@@ -400,6 +512,18 @@ function injectGlobalStyles() {
     .dark article.rounded-2xl:hover, .dark article.rounded-3xl:hover { box-shadow:0 8px 30px rgba(0,0,0,0.25); }
     li.rounded-full { transition:transform 0.2s ease, background-color 0.2s ease, color 0.2s ease; cursor: default; }
     li.rounded-full:hover { transform:scale(1.05); background-color:#2563eb !important; color:#ffffff !important; }
+    @media (min-width:768px) and (max-width:1023px) {
+      header nav > div.hidden { display:none !important; }
+      #mobile-menu-button { display:inline-flex !important; }
+      #mobile-menu:not(.hidden) { display:block !important; }
+    }
+    @media (min-width:1024px) {
+      header nav { max-width:72rem !important; }
+      header nav > div:nth-child(2) { gap:0.75rem !important; }
+    }
+    @media (min-width:1024px) and (max-width:1279px) {
+      header nav [data-cv-preview].hidden { display:none !important; }
+    }
   `;
   document.head.appendChild(style);
 }
@@ -430,6 +554,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initCVButtons();
   createAvisModal();
   initAvisButtons();
+  createCertificateModal();
+  initCertificateButtons();
+  applyLanguage(localStorage.getItem("siteLanguage") || "fr");
   createSideAnimations();
   createChatbot();
   initContactForm();

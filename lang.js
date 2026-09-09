@@ -9,6 +9,7 @@ const translations = {
     nav_home: "Accueil",
     nav_experiences: "Expériences",
     nav_competences: "Compétences",
+    nav_certifications: "Certifications",
     nav_projects: "Projets",
     nav_benevolat: "Bénévolat",
     nav_interets: "Intérêts",
@@ -78,6 +79,25 @@ const translations = {
     exp_clickwars_point2: "Conception de l'architecture réseau LAN pour le mode 2v2 en temps réel.",
     exp_clickwars_point3: "Création de composants QML réutilisables (écrans, overlays, styles).",
     exp_clickwars_point4: "Intégration de bots IA et gestion du scoring par territoire.",
+
+    /* ── Certifications ── */
+    certifications_page_label: "Certifications",
+    certifications_page_subtitle: "Formations et validations obtenues en cybersécurité.",
+    cert_fcf_title: "Fortinet Certified Fundamentals in Cybersecurity",
+    cert_fcf_issuer: "Fortinet Training Institute",
+    cert_cisco_title: "Introduction à la cybersécurité",
+    cert_cisco_issuer: "Cisco Networking Academy",
+    cert_anssi_title: "MOOC SecNumacadémie",
+    cert_anssi_issuer: "ANSSI &middot; SecNumacadémie",
+    cert_nse2_title: "Technical Introduction to Cybersecurity 3.0",
+    cert_nse2_issuer: "Fortinet Training Institute",
+    cert_nse1_title: "Introduction to the Threat Landscape 3.0",
+    cert_nse1_issuer: "Fortinet Training Institute",
+    cert_darkweb_title: "Introduction to Dark Web, Anonymity, and Cryptocurrency",
+    cert_darkweb_issuer: "CodeRed &middot; Continuous Learning",
+    cert_ceh_title: "Relevé d'examen Certified Ethical Hacker (CEH)",
+    cert_ceh_issuer: "EC-Council",
+    certificate_download: "Télécharger",
 
     /* ── Compétences ── */
     skills_title: "Compétences clés",
@@ -228,6 +248,10 @@ const translations = {
     /* ── Modale Avis ── */
     avis_modal_title: "Avis entreprise",
     avis_modal_close: "Fermer",
+    avis_recto: "Recto",
+    avis_verso: "Verso",
+    avis_previous: "Voir le recto",
+    avis_next: "Voir le verso",
 
     /* ── Chatbot ── */
     chatbot_title: "Assistant Portfolio",
@@ -245,6 +269,7 @@ const translations = {
     nav_home: "Home",
     nav_experiences: "Experience",
     nav_competences: "Skills",
+    nav_certifications: "Certifications",
     nav_projects: "Projects",
     nav_benevolat: "Volunteering",
     nav_interets: "Interests",
@@ -312,6 +337,25 @@ const translations = {
     exp_clickwars_point2: "Designed LAN network architecture for real-time 2v2 mode.",
     exp_clickwars_point3: "Created reusable QML components (screens, overlays, styles).",
     exp_clickwars_point4: "Integrated AI bots and territory-based scoring system.",
+
+    /* ── Certifications ── */
+    certifications_page_label: "Certifications",
+    certifications_page_subtitle: "Cybersecurity courses, credentials and assessments.",
+    cert_fcf_title: "Fortinet Certified Fundamentals in Cybersecurity",
+    cert_fcf_issuer: "Fortinet Training Institute",
+    cert_cisco_title: "Introduction to Cybersecurity",
+    cert_cisco_issuer: "Cisco Networking Academy",
+    cert_anssi_title: "SecNumacadémie MOOC",
+    cert_anssi_issuer: "ANSSI &middot; SecNumacadémie",
+    cert_nse2_title: "Technical Introduction to Cybersecurity 3.0",
+    cert_nse2_issuer: "Fortinet Training Institute",
+    cert_nse1_title: "Introduction to the Threat Landscape 3.0",
+    cert_nse1_issuer: "Fortinet Training Institute",
+    cert_darkweb_title: "Introduction to Dark Web, Anonymity, and Cryptocurrency",
+    cert_darkweb_issuer: "CodeRed &middot; Continuous Learning",
+    cert_ceh_title: "Certified Ethical Hacker (CEH) exam transcript",
+    cert_ceh_issuer: "EC-Council",
+    certificate_download: "Download",
 
     /* ── Skills ── */
     skills_title: "Key skills",
@@ -457,6 +501,10 @@ const translations = {
     /* ── Avis Modal ── */
     avis_modal_title: "Company Review",
     avis_modal_close: "Close",
+    avis_recto: "Front",
+    avis_verso: "Back",
+    avis_previous: "View front",
+    avis_next: "View back",
 
     /* ── Chatbot ── */
     chatbot_title: "Portfolio Assistant",

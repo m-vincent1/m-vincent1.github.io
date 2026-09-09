@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Certifications et attestations de Mathis Vincent en cybersécurité." />
+    <title>Certifications - Mathis Vincent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: { extend: { fontFamily: { sans: ['"Inter"', "ui-sans-serif", "system-ui"] }, colors: { primary: { DEFAULT: "#2563eb", light: "#60a5fa" } } } },
+      };
+    </script>
+    <script src="lang.js" defer></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body class="font-sans text-slate-900 bg-slate-50 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-700 backdrop-blur">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+        <a href="index.html" class="text-lg font-semibold tracking-tight dark:text-white" data-i18n="nav_brand" data-nav="index.html">Mathis Vincent</a>
+        <div class="hidden lg:flex items-center gap-3 text-sm font-medium">
+          <a href="index.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_home" data-nav="index.html">Accueil</a>
+          <a href="experiences.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_experiences" data-nav="experiences.html">Expériences</a>
+          <a href="competences.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_competences" data-nav="competences.html">Compétences</a>
+          <a href="certifications.html" class="text-primary dark:text-primary-light font-semibold transition" data-i18n="nav_certifications" data-nav="certifications.html">Certifications</a>
+          <a href="projets.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_projects" data-nav="projets.html">Projets</a>
+          <a href="interets.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_interets" data-nav="interets.html">Intérêts</a>
+          <a href="benevolat.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_benevolat" data-nav="benevolat.html">Bénévolat</a>
+          <a href="contact.html" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-i18n="nav_contact" data-nav="contact.html">Contact</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <button data-cv-preview class="hidden xl:inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition cursor-pointer" data-i18n="nav_cv">Télécharger mon CV</button>
+          <button id="dark-mode-toggle" onclick="toggleDarkMode()" class="rounded-full px-3 py-1.5 text-xs font-semibold transition bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-80">Sombre</button>
+          <div class="relative" id="lang-dropdown-wrapper">
+            <button id="lang-toggle" onclick="toggleLangDropdown()" class="flex items-center gap-1 rounded-full border border-slate-200 dark:border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-primary-light transition" data-i18n-aria-label="language_toggle_label">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3v18"></path></svg>
+              <span id="lang-toggle-text">FR</span>
+            </button>
+            <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-lg overflow-hidden z-50">
+              <button onclick="setLanguage('fr')" class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition" data-i18n="lang_fr">Français</button>
+              <button onclick="setLanguage('en')" class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition" data-i18n="lang_en">English</button>
+            </div>
+          </div>
+          <button id="mobile-menu-button" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md border border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="lg:hidden hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+        <div class="px-4 py-4 space-y-3 text-sm font-medium">
+          <a href="index.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_home" data-nav="index.html">Accueil</a>
+          <a href="experiences.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_experiences" data-nav="experiences.html">Expériences</a>
+          <a href="competences.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_competences" data-nav="competences.html">Compétences</a>
+          <a href="certifications.html" class="block text-primary dark:text-primary-light font-semibold" data-i18n="nav_certifications" data-nav="certifications.html">Certifications</a>
+          <a href="projets.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_projects" data-nav="projets.html">Projets</a>
+          <a href="interets.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_interets" data-nav="interets.html">Intérêts</a>
+          <a href="benevolat.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_benevolat" data-nav="benevolat.html">Bénévolat</a>
+          <a href="contact.html" class="block text-slate-600 dark:text-slate-400" data-i18n="nav_contact" data-nav="contact.html">Contact</a>
+          <button data-cv-preview class="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition cursor-pointer" data-i18n="nav_cv">Télécharger mon CV</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16 space-y-12 flex-1">
+      <section class="space-y-4 text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary" data-i18n="certifications_page_label">Certifications</p>
+        <h1 class="text-3xl font-semibold text-slate-900 dark:text-white" data-i18n="certifications_page_subtitle">Formations et validations obtenues en cybersécurité.</h1>
+      </section>
+
+      <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-5 shadow-sm flex flex-col">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-500" data-i18n="cert_fcf_issuer">Fortinet Training Institute</p>
+          <h2 class="mt-2 text-lg font-semibold text-slate-900 dark:text-white" data-i18n="cert_fcf_title">Fortinet Certified Fundamentals in Cybersecurity</h2>
+          <button type="button" data-certificate-file="assets/Certif cyber/Fortinet Certified Fundamentals in Cybersecurity.pdf" data-certificate-title-key="cert_fcf_title" class="mt-5 h-56 w-full overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 cursor-pointer group" aria-label="Aperçu de la certification Fortinet Certified Fundamentals in Cybersecurity">
+            <img src="assets/certification-previews/fortinet-fcf.png" alt="Aperçu de la certification Fortinet Certified Fundamentals in Cybersecurity" class="h-full w-full object-contain transition duration-200 group-hover:scale-[1.02]" />
+          </button>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-5 shadow-sm flex flex-col">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-500" data-i18n="cert_cisco_issuer">Cisco Networking Academy</p>
+          <h2 class="mt-2 text-lg font-semibold text-slate-900 dark:text-white" data-i18n="cert_cisco_title">Introduction à la cybersécurité</h2>
+          <button type="button" data-certificate-file="assets/Certif cyber/Cisco-Introduction-à-la-Cybersécurité.pdf" data-certificate-title-key="cert_cisco_title" class="mt-5 h-56 w-full overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 cursor-pointer group" aria-label="Aperçu de la certification Cisco Introduction à la cybersécurité">
+            <img src="assets/certification-previews/cisco.png" alt="Aperçu de la certification Cisco Introduction à la cybersécurité" class="h-full w-full object-contain transition duration-200 group-hover:scale-[1.02]" />
+          </button>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-5 shadow-sm flex flex-col">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-500" data-i18n="cert_anssi_issuer">ANSSI · SecNumacadémie</p>
+          <h2 class="mt-2 text-lg font-semibold text-slate-900 dark:text-white" data-i18n="cert_anssi_title">MOOC SecNumacadémie</h2>
+          <button type="button" data-certificate-file="assets/Certif cyber/Attestation-MOOC-ANSSI.pdf" data-certificate-title-key="cert_anssi_title" class="mt-5 h-56 w-full overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 cursor-pointer group" aria-label="Aperçu de l'attestation MOOC SecNumacadémie">
+            <img src="assets/certification-previews/anssi.png" alt="Aperçu de l'attestation MOOC SecNumacadémie" class="h-full w-full object-contain transition duration-200 group-hover:scale-[1.02]" />
+          </button>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-5 shadow-sm flex flex-col">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-500" data-i18n="cert_nse2_issuer">Fortinet Training Institute</p>
+          <h2 class="mt-2 text-lg font-semibold text-slate-900 dark:text-white" data-i18n="cert_nse2_title">Technical Introduction to Cybersecurity 3.0</h2>
+          <button type="button" data-certificate-file="assets/Certif cyber/Certification-NSE2.pdf" data-certificate-title-key="cert_nse2_title" class="mt-5 h-56 w-full overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 cursor-pointer group" aria-label="Aperçu de la certification Technical Introduction to Cybersecurity 3.0">
+            <img src="assets/certification-previews/nse2.png" alt="Aperçu de la certification Technical Introduction to Cybersecurity 3.0" class="h-full w-full object-contain transition duration-200 group-hover:scale-[1.02]" />
+          </button>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-5 shadow-sm flex flex-col">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-500" data-i18n="cert_nse1_issuer">Fortinet Training Institute</p>
+          <h2 class="mt-2 text-lg font-semibold text-slate-900 dark:text-white" data-i18n="cert_nse1_title">Introduction to the Threat Landscape 3.0</h2>
+          <button type="button" data-certificate-file="assets/Certif cyber/Certification-NSE1.pdf" data-certificate-title-key="cert_nse1_title" class="mt-5 h-56 w-full overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 cursor-pointer group" aria-label="Aperçu de la certification Introduction to the Threat Landscape 3.0">
+            <img src="assets/certification-previews/nse1.png" alt="Aperçu de la certification Introduction to the Threat Landscape 3.0" class="h-full w-full object-contain transition duration-200 group-hover:scale-[1.02]" />
+          </button>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-5 shadow-sm flex flex-col">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-500" data-i18n="cert_darkweb_issuer">CodeRed · Continuous Learning</p>
+          <h2 class="mt-2 text-lg font-semibold text-slate-900 dark:text-white" data-i18n="cert_darkweb_title">Introduction to Dark Web, Anonymity, and Cryptocurrency</h2>
+          <button type="button" data-certificate-file="assets/Certif cyber/Certifications-Introduction to Dark Web, Anonymity, and Cryptocurrency.png" data-certificate-title-key="cert_darkweb_title" class="mt-5 h-56 w-full overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 cursor-pointer group" aria-label="Aperçu de l'attestation Introduction to Dark Web, Anonymity, and Cryptocurrency">
+            <img src="assets/certification-previews/dark-web.jpg" alt="Aperçu de l'attestation Introduction to Dark Web, Anonymity, and Cryptocurrency" class="h-full w-full object-contain transition duration-200 group-hover:scale-[1.02]" />
+          </button>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 p-5 shadow-sm flex flex-col md:col-span-2 lg:col-span-1">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-500" data-i18n="cert_ceh_issuer">EC-Council</p>
+          <h2 class="mt-2 text-lg font-semibold text-slate-900 dark:text-white" data-i18n="cert_ceh_title">Relevé d'examen Certified Ethical Hacker (CEH)</h2>
+          <button type="button" data-certificate-file="assets/Certif cyber/Certification-CEH.pdf" data-certificate-title-key="cert_ceh_title" class="mt-5 h-56 w-full overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 cursor-pointer group" aria-label="Aperçu du relevé d'examen Certified Ethical Hacker">
+            <img src="assets/certification-previews/ceh.png" alt="Aperçu du relevé d'examen Certified Ethical Hacker" class="h-full w-full object-contain object-top transition duration-200 group-hover:scale-[1.02]" />
+          </button>
+        </article>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80">
+      <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-slate-500 dark:text-slate-400" data-i18n="footer_text">&copy; 2026 Mathis Vincent - Tous droits réservés</div>
+    </footer>
+  </body>
+</html>
